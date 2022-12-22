@@ -1,0 +1,27 @@
+{% comment %}
+	Renders the mini cart's footer
+
+	Usage:
+	{% render 'header-mini-cart-footer' %}
+{% endcomment %}
+
+{%- if cart != empty -%}
+	<div class="mini-cart-footer">
+		<div id="mini-cart-totals" class="mini-cart-recap">
+			<span>{{ 'templates.cart.headings.total' | t }}</span>
+			<span>{{ cart.total_price | money_with_currency }}</span>
+		</div>
+
+		<div class="mini-cart-footer-actions">
+			<a href="{{ routes.cart_url }}" class="button button-tertiary">
+				{{ 'sections.minicart.view_cart' | t }} {% render 'angle', direction: 'right' %}
+			</a>
+
+			<button type="submit" class="button" name="checkout">
+				{{ 'templates.cart.checkout' | t }} {% render 'angle', direction: 'right' %}
+			</button>
+		</div>
+
+		<span class="spinner-sm"></span>
+	</div>
+{%- endif -%}

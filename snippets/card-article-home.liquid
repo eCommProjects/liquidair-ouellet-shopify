@@ -1,0 +1,83 @@
+{% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
+{% comment %}
+    Renders an article card for a given blog with settings to either show the image or not.
+
+    Accepts:
+    - blog: {Object} Blog object
+    - article: {Object} Article object
+    - show_date: {String} The setting either show the article date or not. If it's not included it will show the image by default
+    - show_author: {String} The setting either show the article author or not. If it's not included it will show the author by default
+    - lazyload: {Boolean} Image should be lazy loaded. Default: true (optional)
+    - class: {String} Optional CSS class
+
+    Usage:
+    {% render 'card-article-home' blog: blog, article: article %}
+{% endcomment %}
+
+{%- if article and article != empty -%}
+	<div class="card card-standard {{ class }}">
+		{%- if article.image -%}
+			<figure class="card-media">
+				<a href="{{ article.url }}" title="{{ article.title }}">
+					<div class="aspect-ratio" style="--ratio-percent: 66.66667%;">
+						<img
+							srcset="{%- if article.image.width >= 250 -%}{{ article.image | image_url: width: 250 }} 250w,{%- endif -%}
+								{%- if article.image.width >= 450 -%}{{ article.image | image_url: width: 450 }} 450w,{%- endif -%}
+								{%- if article.image.width >= 600 -%}{{ article.image | image_url: width: 600 }} 600w,{%- endif -%}
+								{%- if article.image.width >= 700 -%}{{ article.image | image_url: width: 700 }} 700w,{%- endif -%}
+								{%- if article.image.width >= 950 -%}{{ article.image | image_url: width: 950 }} 950w,{%- endif -%}
+								{%- if article.image.width >= 1400 -%}{{ article.image | image_url: width: 1400 }} 1400w,{%- endif -%}
+								{{ article.image | image_url }} {{ article.image.width }}w"
+							sizes="calc((100vw - 4.5rem) / 2)"
+							src="{{ article.image.src | image_url: width: 700 }}"
+							alt="{{ article.image.src.alt | escape }}"
+							width="{{ article.image.width }}"
+							height="{{ article.image.height }}"
+							{% unless lazyload == false %}loading="lazy"{% endunless %}
+						>
+					</div>
+				</a>
+			</figure>
+		{%- endif -%}
+
+		<div class="card-info">
+			<div class="card-article-info card-eyebrow">
+				{%- if show_date -%}
+					<span>
+						{{ article.published_at | time_tag: format: 'date' }}
+					</span>
+				{%- endif -%}
+
+				{%- if show_author -%}
+					<span>
+						{% if article.user.homepage %}
+							<a href="{{ article.user.homepage }}">{{ article.author }}</a>
+						{% else %}
+							{{ article.author }}
+						{% endif %}
+					</span>
+				{%- endif -%}
+			</div>
+
+			<h3 class="card-heading">
+				<a href="{{ article.url }}">
+					{{ article.title | escape }}
+				</a>
+			</h3>
+		</div>
+	</div>
+{%- else -%}
+	<div class="card card-standard card-placeholder">
+		<figure class="card-media">
+			<div class="aspect-ratio" style="--ratio-percent: 66.66667%;">
+				{{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+			</div>
+		</figure>
+
+		<div class="card-info">
+			<h3 class="card-heading">
+				{{ 'onboarding.article_title' | t }}
+			</h3>
+		</div>
+	</div>
+{%- endif -%}

@@ -1,0 +1,61 @@
+{%- unless template == 'index' or template == 'cart' or template == 'list-collections' or template == '404' or template == 'password' -%}
+	{% assign separator = "&raquo;" %}
+
+	{{ 'component-breadcrumb.css' | asset_url | stylesheet_tag }}
+
+	<div class="breadcrumb">
+		<div class="container">
+			<a href="{{ routes.root_url }}">Home</a>
+			{% case template.name %}
+				{% when 'product' %}
+					{% if collection.url %}
+						<span>{{ separator }}</span>
+						{{ collection.title | link_to: collection.url }}
+					{% endif %}
+
+					<span>{{ separator }}</span>
+					{{ product.title }}
+				{%- when 'page' -%}
+					<span>{{ separator }}</span>
+					{{ page.title }}
+				{%- when 'collection' and collection.handle -%}
+					{%- if current_tags -%}
+						<span>{{ separator }}</span>
+						{{ collection.title | link_to: collection.url }}
+
+						<span>{{ separator }}</span>
+						{%- capture tag_url -%}{{ collection.url }}/{{ current_tags | join: "+" }}{%- endcapture -%}
+						<a href="{{ tag_url }}">{{ current_tags | join: " + " }}</a>
+					{%- else -%}
+						<span>{{ separator }}</span>
+						<a href="{{ collection.url }}">{{ collection.title }}</a>
+					{%- endif -%}
+				{%- when 'blog' -%}
+					{%- if current_tags -%}
+						<span>{{ separator }}</span>
+						{{ blog.title | link_to: blog.url }}
+
+						<span>{{ separator }}</span>
+						{%- capture tag_url -%}{{ blog.url }}/tagged/{{ current_tags | join: "+" }}{%- endcapture -%}
+						<a href="{{ tag_url }}">{{ current_tags | join: " + " }}</a>
+					{%- else -%}
+						<span>{{ separator }}</span>
+						{{ blog.title }}
+					{%- endif -%}
+				{%- when 'article' -%}
+					<span>{{ separator }}</span>
+					{{ blog.title | link_to: blog.url }}
+
+					<span>{{ separator }}</span>
+					{{ article.title }}
+				{%- when 'search' -%}
+					<span>{{ separator }}</span>
+					Search
+				{%- else -%}
+					<span>{{ separator }}</span>
+					{{ page_title }}
+			{% endcase %}
+		</div>
+	</div>
+{%- endunless -%}
+

@@ -1,0 +1,37 @@
+{% comment %}
+    Renders a product's availability (in stock, out of stock, only X left)
+
+    Accepts:
+    - product: {Object} Product object
+
+    Usage:
+    {% render 'product-availability', product: product %}
+{% endcomment %}
+
+{% assign variant = product.selected_or_first_available_variant %}
+
+{% if variant.inventory_policy == 'continue' or variant.inventory_management == null %}
+	<div class="badge-stock badge-stock-in">
+		<span class="badge-stock-dot"></span> <span class="js-stock-text">{{ 'products.product.availability.always_in_stock' | t }}</span>
+	</div>
+{% else %}
+	{% if variant.available == false %}
+		<div class="badge-stock badge-stock-out">
+			<span class="badge-stock-dot"></span> <span class="js-stock-text">{{ 'products.product.availability.out_of_stock' | t }}</span>
+		</div>
+	{% else %}
+		{% if settings.only_x_left >= 1 and variant.inventory_quantity <= settings.only_x_left %}
+			<div class="badge-stock badge-stock-warning">
+				<span class="badge-stock-dot"></span> <span class="js-stock-text">{{ 'products.product.availability.number_left' | t: count: variant.inventory_quantity }}</span>
+			</div>
+		{% else %}
+			<div class="badge-stock badge-stock-in">
+				<span class="badge-stock-dot"></span>
+					<span class="js-stock-text">
+						{{ 'products.product.availability.in_stock' | t }}
+						{% if settings.show_items_in_stock %} - {{ 'products.product.availability.number_available' | t: count: variant.inventory_quantity }}{% endif %}
+					</span>
+			</div>
+		{% endif %}
+	{% endif %}
+{% endif %}

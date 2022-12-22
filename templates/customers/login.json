@@ -1,10 +1,8 @@
 {
   "sections": {
     "main": {
-      "type": "main-login",
+      "type": "main-customers-login",
       "settings": {
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     }
   },

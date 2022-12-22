@@ -6,33 +6,35 @@
         "featured_image": {
           "type": "featured_image",
           "settings": {
-            "image_height": "adapt"
+          }
+        },
+        "meta": {
+          "type": "meta",
+          "settings": {
           }
         },
         "title": {
           "type": "title",
           "settings": {
-            "blog_show_date": true,
-            "blog_show_author": false
-          }
-        },
-        "share": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
           }
         },
         "content": {
           "type": "content",
           "settings": {
           }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+          }
         }
       },
       "block_order": [
         "featured_image",
+        "meta",
         "title",
-        "share",
-        "content"
+        "content",
+        "share"
       ],
       "settings": {
       }

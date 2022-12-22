@@ -1,60 +1,52 @@
+/* Component - Rating
+=================================== */
 .rating {
+  display: flex;
+  align-items: center;
+  vertical-align: bottom;
+  line-height: inherit;
+}
+
+.rating-stars {
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.icon-rating-star {
+  color: var(--color-product-review-star);
   display: inline-block;
-  margin: 0;
+  width: 1.4rem;
+  height: 1.4rem;
+  fill: currentColor;
+  vertical-align: middle;
+  background: none;
+  pointer-events: none;
+  overflow: visible;
 }
 
-.product .rating-star {
-  --letter-spacing: 0.8;
-  --font-size: 1.7;
+.icon-rating-star-empty {
+  color: rgba(var(--color-foreground), 0.3);
 }
 
-.card-wrapper .rating-star {
-  --letter-spacing: 0.7;
-  --font-size: 1.4;
+.rating-caption {
+  margin-left: 0.3rem;
+  display: block;
+  top: 1px;
+  position: relative;
 }
 
-.rating-star {
-  --percent: calc(
-    (
-        var(--rating) / var(--rating-max) + var(--rating-decimal) *
-          var(--font-size) /
-          (var(--rating-max) * (var(--letter-spacing) + var(--font-size)))
-      ) * 100%
-  );
-  letter-spacing: calc(var(--letter-spacing) * 1rem);
-  font-size: calc(var(--font-size) * 1rem);
+.star-rating-link {
+  font-size: calc(var(--font-body-scale) * 1.2rem);
+  display: flex;
+  align-items: center;
+  font-weight: var(--font-bolder-weight);
+  color: rgb(var(--color-foreground));
   line-height: 1;
-  display: inline-block;
-  font-family: Times;
-  margin: 0;
+  flex: none;
 }
 
-.rating-star::before {
-  content: '★★★★★';
-  background: linear-gradient(
-    90deg,
-    var(--color-icon) var(--percent),
-    rgba(var(--color-foreground), 0.15) var(--percent)
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.rating-text {
-  display: none;
-}
-
-.rating-count {
-  display: inline-block;
-  margin: 0;
-}
-
-@media (forced-colors: active) {
-  .rating {
-    display: none;
-  }
-
-  .rating-text {
-    display: block;
-  }
+.star-rating-link .star-rating {
+  margin-right: 0.5rem;
+  position: relative;
+  top: -1px;
 }

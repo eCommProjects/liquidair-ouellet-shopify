@@ -1,0 +1,75 @@
+{% comment %}
+    Renders a customizable collection card.
+
+    Accepts:
+    - collection: {Object} Collection object
+    - image: {Object} Image object. Optional. If present, overrides the collection's image.
+    - title: {Boolean} Show title. Default: true.
+    - class: {String} Extra CSS classes. Optional.
+    - aspect: {String} Portrait, Square, or Adapt. Optional.
+    - columns {Number} Optional. The number of columns the card is rendered in.
+
+    Usage:
+    {% render 'card-simple-collection-info' collection: collection, image: image %}
+{% endcomment %}
+
+{% liquid
+	assign target_image = collection.featured_image
+	if image != blank
+		assign target_image = image
+	endif
+
+	assign ratio = 1
+	if target_image and aspect == 'portrait'
+		assign ratio = 0.8
+	elsif target_image and aspect == 'landscape'
+		assign ratio = 1.77
+	elsif target_image and aspect == 'adapt'
+		assign ratio = target_image.aspect_ratio
+	endif
+	if ratio == 0 or ratio == nil
+		assign ratio = 1
+	endif
+%}
+
+<div class="card-simple {{ class }}">
+	<div class="card card-small card-simple-media color-background-1">
+		<a href="{{ collection.url }}" class="card-media card-justify-center">
+			{% if target_image != blank %}
+				{% if ratio != 0 %}
+					<div class="aspect-ratio" style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;">
+				{% endif %}
+				<img
+					srcset="{%- if target_image.width >= 250 -%}{{ target_image | image_url: width: 250 }} 250w,{%- endif -%}
+							{%- if target_image.width >= 450 -%}{{ target_image | image_url: width: 450 }} 450w,{%- endif -%}
+							{%- if target_image.width >= 650 -%}{{ target_image | image_url: width: 650 }} 650w,{%- endif -%}
+							{%- if target_image.width >= 750 -%}{{ target_image | image_url: width: 750 }} 750w,{%- endif -%}
+							{%- if target_image.width >= 950 -%}{{ target_image | image_url: width: 950 }} 950w,{%- endif -%}
+							{{ target_image | image_url }} {{ target_image.width }}w"
+					sizes="(min-width: 1200px) 420px, (min-width: 990px) calc((100vw - 4rem - 3rem) / 3), calc(100vw - 3rem - 1rem)"
+					src="{{ target_image | image_url: width: 450 }}"
+					alt="{{ target_image.alt | escape }}"
+					width="{{ target_image.width }}"
+					height="{{ target_image.height }}"
+					loading="lazy"
+				/>
+				{% if ratio != 0 %}
+					</div>
+				{% endif %}
+
+			{% else %}
+				{{ 'collection-1' | strip | placeholder_svg_tag }}
+			{% endif %}
+		</a>
+	</div>
+
+	{% unless title == false %}
+		<h3 class="card-simple-title">
+			{% if collection.title %}
+				<a href="{{ collection.url }}">{{ collection.title }}</a>
+			{% else %}
+				{{ 'onboarding.collection_title' | t }}
+			{% endif %}
+		</h3>
+	{% endunless %}
+</div>

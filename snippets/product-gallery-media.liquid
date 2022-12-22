@@ -1,0 +1,156 @@
+{% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
+{% comment %}
+    Renders a product thumbnail
+
+    Accepts:
+    - media: {Object} Product Media object
+    - position: {Integer} Position of the media. Used for accessible label.
+    - media_width: {Integer} The width of the media in pixels.
+    - lazyload: {Boolean} Image should be lazy loaded. Default: true (optional).
+    - modal_id: {String} The product modal that will be shown by clicking the thumbnail.
+
+    Usage:
+    {% render 'product-gallery-media',
+      media: media,
+      position: forloop.index,
+      modal_id: section.id
+    %}
+{% endcomment %}
+
+{%- liquid
+	assign ratio = 0
+	if media and media.preview_image.aspect_ratio != 0 and media.preview_image.aspect_ratio != nil
+		assign ratio = media.preview_image.aspect_ratio
+	endif
+-%}
+
+<noscript>
+	<a href="{{ media.preview_image | image_url: width: 1946 }}">
+		<div
+			{% if ratio != 0 %}
+				class="aspect-ratio"
+				style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
+			{% endif %}
+		>
+			<img src="{{ media.preview_image | image_url: width: media_width }}"
+				width="{{ media_width }}"
+				height="{{ media_width | divided_by: media.preview_image.aspect_ratio | ceil }}"
+				alt="{{ media.preview_image.alt | escape }}"
+				srcset="{%- if media.preview_image.width >= 200 -%}{{ media.preview_image | image_url: width: 200 }} 200w,{%- endif -%}
+					{%- if media.preview_image.width >= 420 -%}{{ media.preview_image | image_url: width: 420 }} 420w,{%- endif -%}
+					{%- if media.preview_image.width >= 550 -%}{{ media.preview_image | image_url: width: 550 }} 550w,{%- endif -%}
+					{%- if media.preview_image.width >= 750 -%}{{ media.preview_image | image_url: width: 750 }} 750w,{%- endif -%}
+					{%- if media.preview_image.width >= 950 -%}{{ media.preview_image | image_url: width: 950 }} 950w,{%- endif -%}
+					{%- if media.preview_image.width >= 1200 -%}{{ media.preview_image | image_url: width: 1200 }} 1200w,{%- endif -%}
+					{{ media.preview_image | image_url }} {{ media.preview_image.width }}w"
+				sizes="(min-width: 1200px) 550px, (min-width: 990px) calc(((100vw - 4rem) / 2) - 5rem), (min-width: 750px) calc(100vw - 6rem - (14% + 20px)), calc(100vw - 5rem)"
+				{% if lazyload != false %}loading="lazy"{% endif %}
+			/>
+		</div>
+	</a>
+</noscript>
+
+<modal-opener class="product-modal-opener product-modal-opener-{{ media.media_type }} no-js-hidden" data-modal="#ProductModal-{{ modal_id }}">
+	<div
+		{% if ratio != 0 %}
+			class="aspect-ratio"
+			style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
+		{% endif %}
+	>
+		<img
+			class="no-js-hidden"
+			src="{{ media.preview_image | image_url: width: media_width }}"
+			width="{{ media_width }}"
+			height="{{ media_width | divided_by: media.preview_image.aspect_ratio | ceil }}"
+			alt="{{ media.preview_image.alt | escape }}"
+			srcset="{%- if media.preview_image.width >= 200 -%}{{ media.preview_image | image_url: width: 200 }} 200w,{%- endif -%}
+				{%- if media.preview_image.width >= 420 -%}{{ media.preview_image | image_url: width: 420 }} 420w,{%- endif -%}
+				{%- if media.preview_image.width >= 550 -%}{{ media.preview_image | image_url: width: 550 }} 550w,{%- endif -%}
+				{%- if media.preview_image.width >= 750 -%}{{ media.preview_image | image_url: width: 750 }} 750w,{%- endif -%}
+				{%- if media.preview_image.width >= 950 -%}{{ media.preview_image | image_url: width: 950 }} 950w,{%- endif -%}
+				{%- if media.preview_image.width >= 1200 -%}{{ media.preview_image | image_url: width: 1200 }} 1200w,{%- endif -%}
+				{{ media.preview_image | image_url }} {{ media.preview_image.width }}w"
+			sizes="(min-width: 1200px) 550px, (min-width: 990px) calc(((100vw - 4rem) / 2) - 5rem), (min-width: 750px) calc(100vw - 6rem - (14% + 20px)), calc(100vw - 5rem)"
+			{% if lazyload != false %}loading="lazy"{% endif %}
+		>
+	</div>
+
+	<button type="button" class="product-media-toggle no-js-hidden" aria-haspopup="dialog" data-media-id="{{ media.id }}">
+		<span class="visually-hidden">{{ 'products.product.media.open_media' | t: index: position }}</span>
+	</button>
+
+	<span class="product-media-icon-enlarge no-js-hidden">
+		{% render 'icon-search' %}
+	</span>
+</modal-opener>
+
+{%- if media.media_type != 'image' -%}
+	{%- if media.media_type == 'model' -%}
+		<product-model class="deferred-media media-with-aspect no-js-hidden" style="padding-top: 100%" data-media-id="{{ media.id }}">
+	{%- else -%}
+		<deferred-media class="deferred-media media-with-aspect no-js-hidden" style="padding-top: {{ 1 | divided_by: media.preview_image.aspect_ratio | times: 100 }}%" data-media-id="{{ media.id }}">
+	{%- endif -%}
+	<button id="Deferred-Poster-Modal-{{ media.id }}" class="deferred-media-poster" type="button">
+		<span class="deferred-media-poster-button">
+			{%- if media.media_type == 'model' -%}
+				<span class="visually-hidden">{{ 'products.product.media.play_model' | t }}</span>
+				{%- render 'icon-3d-model' -%}
+			{%- else -%}
+				<span class="visually-hidden">{{ 'products.product.media.play_video' | t }}</span>
+				{%- render 'icon-play' -%}
+			{%- endif -%}
+		</span>
+		<img
+			class="no-js-hidden"
+			src="{{ media.preview_image | image_url: width: media_width }}"
+			srcset="{%- if media.preview_image.width >= 200 -%}{{ media.preview_image | image_url: width: 200 }} 200w,{%- endif -%}
+				{%- if media.preview_image.width >= 420 -%}{{ media.preview_image | image_url: width: 420 }} 420w,{%- endif -%}
+				{%- if media.preview_image.width >= 550 -%}{{ media.preview_image | image_url: width: 550 }} 550w,{%- endif -%}
+				{%- if media.preview_image.width >= 750 -%}{{ media.preview_image | image_url: width: 750 }} 750w,{%- endif -%}
+				{%- if media.preview_image.width >= 950 -%}{{ media.preview_image | image_url: width: 950 }} 950w,{%- endif -%}
+				{%- if media.preview_image.width >= 1200 -%}{{ media.preview_image | image_url: width: 1200 }} 1200w,{%- endif -%}
+				{{ media.preview_image | image_url }} {{ media.preview_image.width }}w"
+			sizes="(min-width: 1200px) 550px, (min-width: 990px) calc(((100vw - 4rem) / 2) - 5rem), (min-width: 750px) calc(100vw - 6rem - (14% + 20px)), calc(100vw - 5rem)"
+			width="{{ media_width }}"
+			height="{{ media_width | divided_by: media.preview_image.aspect_ratio | ceil }}"
+			alt="{{ media.preview_image.alt | escape }}"
+			{% if lazyload != false %}loading="lazy"{% endif %}
+		/>
+	</button>
+	<template>
+		{%- liquid
+			case media.media_type
+				when 'external_video'
+					assign video_class = 'js-' | append: media.host
+					if media.host == 'youtube'
+						echo media | external_video_url: autoplay: true, loop: loop, playlist: media.external_id | external_video_tag: class: video_class, loading: "lazy"
+					else
+						echo media | external_video_url: autoplay: true, loop: loop | external_video_tag: class: video_class, loading: "lazy"
+					endif
+				when 'video'
+					echo media | media_tag: image_size: "2048x", autoplay: true, loop: loop, controls: true, preload: "none"
+				when 'model'
+					echo media | media_tag: image_size: "2048x", toggleable: true
+			endcase
+		-%}
+	</template>
+
+	{%- if media.media_type == 'model' -%}
+		</product-model>
+		<button
+			class="button product-xr-button"
+			type="button"
+			aria-label="{{ 'products.product.xr_button_label' | t }}"
+			data-shopify-xr
+			data-shopify-model3d-id="{{ media.id }}"
+			data-shopify-title="title"
+			data-shopify-xr-hidden
+		>
+			{{ 'products.product.xr_button' | t }}
+			{% render 'icon-3d-model' %}
+		</button>
+	{%- else -%}
+		</deferred-media>
+	{%- endif -%}
+{%- endif -%}
+

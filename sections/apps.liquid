@@ -1,7 +1,7 @@
-<div class="{% if section.settings.include_margins %}page-width{% endif %}">
-  {%- for block in section.blocks -%}
-    {% render block %}
-  {%- endfor -%}
+<div class="{% if section.settings.full_width %} block-section-fullwidth{% else %} container block-section{% endif %}">
+	{%- for block in section.blocks -%}
+		{% render block %}
+	{%- endfor -%}
 </div>
 
 {% schema %}
@@ -12,9 +12,9 @@
   "settings": [
     {
       "type": "checkbox",
-      "id": "include_margins",
-      "default": true,
-      "label": "t:sections.apps.settings.include_margins.label"
+      "id": "full_width",
+      "label": "t:sections.apps.settings.full_width.label",
+      "default": false
     }
   ],
   "blocks": [

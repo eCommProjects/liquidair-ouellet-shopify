@@ -1,0 +1,99 @@
+{% comment %}
+    Renders a video with cover image as deferred media.
+
+    Accepts:
+    - media_id: {String} The video unique id.
+    - video_url: {String} The video url.
+    - cover_image: {Object} An optional cover image to show as the video's cover.
+    - description: {String} An optional video description for screen readers.
+    - full_width: {Boolean} If the video is displayed full width. Default: false
+
+    Usage:
+    {% render 'video' media_id: video_url.id, video_url: video_url, cover_image: cover_image, description: description %}
+{% endcomment %}
+
+<noscript>
+	<div class="video-media media-with-aspect"
+		{% if cover_image != blank %} style="padding-bottom: {{ 1 | divided_by: cover_image.aspect_ratio | times: 100 }}%;"{% endif %}
+	>
+		<a href="{{ video_url }}" class="video-poster {% if cover_image == blank %} video-placeholder{% endif %}">
+			{%- if cover_image != blank -%}
+				<img srcset="{%- if cover_image.width >= 375 -%}{{ cover_image | image_url: width: 375 }} 375w,{%- endif -%}
+						{%- if cover_image.width >= 750 -%}{{ cover_image | image_url: width: 750 }} 750w,{%- endif -%}
+						{%- if cover_image.width >= 1100 -%}{{ cover_image | image_url: width: 1100 }} 1100w,{%- endif -%}
+						{%- if cover_image.width >= 1500 -%}{{ cover_image | image_url: width: 1500 }} 1500w,{%- endif -%}
+						{%- if cover_image.width >= 1780 -%}{{ cover_image | image_url: width: 1780 }} 1780w,{%- endif -%}
+						{%- if cover_image.width >= 2000 -%}{{ cover_image | image_url: width: 2000 }} 2000w,{%- endif -%}
+						{%- if cover_image.width >= 3000 -%}{{ cover_image | image_url: width: 3000 }} 3000w,{%- endif -%}
+						{%- if cover_image.width >= 3840 -%}{{ cover_image | image_url: width: 3840 }} 3840w,{%- endif -%}
+						{{ cover_image | image_url }} {{ cover_image.width }}w"
+					sizes="{% if full_width %}100vw{% else %}calc(100vw - 3rem){% endif %}"
+					src="{{ cover_image | image_url: width: 1920 }}"
+					{% if description != blank %}
+						alt="{{ 'general.video.load' | t: description: description }}"
+					{% else %}
+						alt=""
+					{% endif %}
+					width="{{ cover_image.width }}"
+					height="{{ cover_image.height }}"
+					loading="lazy"
+				/>
+			{%- else -%}
+				{{ 'collection-2' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+			{%- endif -%}
+
+			<span class="deferred-media-poster-button video-poster-button">
+				{%- render 'icon-play' -%}
+			</span>
+		</a>
+	</div>
+</noscript>
+
+<deferred-media
+	class="video-media deferred-media media-with-aspect no-js-hidden"
+	data-media-id="{{ video_url.id }}"
+	{% if cover_image != blank %} style="padding-bottom: {{ 1 | divided_by: cover_image.aspect_ratio | at_least: 0.5625 | times: 100 }}%;"{% endif %}
+>
+	<button id="Deferred-Poster-Modal-{{ video_url.id }}" class="deferred-media-poster video-poster {% if cover_image == blank %} video-placeholder{% endif %}" type="button">
+		{%- if cover_image != blank -%}
+			<img
+				srcset="{%- if cover_image.width >= 375 -%}{{ cover_image | image_url: width: 375 }} 375w,{%- endif -%}
+					{%- if cover_image.width >= 750 -%}{{ cover_image | image_url: width: 750 }} 750w,{%- endif -%}
+					{%- if cover_image.width >= 1100 -%}{{ cover_image | image_url: width: 1100 }} 1100w,{%- endif -%}
+					{%- if cover_image.width >= 1500 -%}{{ cover_image | image_url: width: 1500 }} 1500w,{%- endif -%}
+					{%- if cover_image.width >= 1780 -%}{{ cover_image | image_url: width: 1780 }} 1780w,{%- endif -%}
+					{%- if cover_image.width >= 2000 -%}{{ cover_image | image_url: width: 2000 }} 2000w,{%- endif -%}
+					{%- if cover_image.width >= 3000 -%}{{ cover_image | image_url: width: 3000 }} 3000w,{%- endif -%}
+					{%- if cover_image.width >= 3840 -%}{{ cover_image | image_url: width: 3840 }} 3840w,{%- endif -%}
+					{{ cover_image | image_url }} {{ cover_image.width }}w"
+				sizes="{% if full_width %}100vw{% else %}calc(100vw - 3rem - 1rem){% endif %}"
+				src="{{ cover_image | image_url: width: 1920 }}"
+				{% if description != blank %}
+					alt="{{ 'general.video.load' | t: description: description }}"
+				{% else %}
+					alt=""
+				{% endif %}
+				width="{{ cover_image.width }}"
+				height="{{ cover_image.height }}"
+				loading="lazy"
+			/>
+		{%- else -%}
+			{{ 'collection-2' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+		{%- endif -%}
+
+		<span class="visually-hidden">{{ 'general.video.play' | t }}</span>
+		<span class="deferred-media-poster-button video-poster-button">
+			{%- render 'icon-play' -%}
+		</span>
+	</button>
+
+	<template>
+		<div class="video-wrapper">
+			{%- if video_url.type == 'youtube' -%}
+				<iframe src="https://www.youtube.com/embed/{{ video_url.id }}?enablejsapi=1&autoplay=1" class="js-youtube" allow="autoplay; encrypted-media" allowfullscreen title="{{ description | escape }}"></iframe>
+			{%- else -%}
+				<iframe src="https://player.vimeo.com/video/{{ video_url.id }}?autoplay=1" class="js-vimeo" allow="autoplay; encrypted-media" allowfullscreen title="{{ description | escape }}"></iframe>
+			{%- endif -%}
+		</div>
+	</template>
+</deferred-media>
