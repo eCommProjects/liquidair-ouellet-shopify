@@ -127,8 +127,8 @@
     "featured-collection-1": {
       "type": "featured-collection",
       "settings": {
-        "collection": "gree",
-        "products_to_show": 8,
+        "collection": "air-conditionners",
+        "products_to_show": 4,
         "products": [
           "window-air-conditionner-tosot-series-wat-b",
           "window-air-conditionner-tosot-wat-m-series",
