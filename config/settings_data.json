@@ -40,7 +40,7 @@
     "products_show_add_to_cart": true,
     "products_two_column_mobile": true,
     "products_pagination": "default",
-    "product_image_ratio": "adapt",
+    "product_image_ratio": "square",
     "currency_code_enabled": false,
     "checkout_logo_image": "shopify:\/\/shop_images\/Screenshot_2022-12-07_at_9.43.15_PM.png",
     "checkout_accent_color": "#676767",
