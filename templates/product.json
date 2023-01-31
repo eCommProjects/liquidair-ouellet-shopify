@@ -63,6 +63,15 @@
             "title": "Description",
             "expanded": true
           }
+        },
+        "b8f0b091-0dd5-4b9f-88e3-9596dceab2ee": {
+          "type": "expandable",
+          "settings": {
+            "title": "Title",
+            "icon": "document",
+            "text": "<p><a href=\"https:\/\/www.ouellet.com\/ouellet.com\/files\/d9\/d91a330e-313d-4e63-abc5-ecb5964ab414.pdf\" target=\"_blank\" title=\"https:\/\/www.ouellet.com\/ouellet.com\/files\/d9\/d91a330e-313d-4e63-abc5-ecb5964ab414.pdf\">Product Sheet<\/a><\/p>",
+            "expanded": false
+          }
         }
       },
       "block_order": [
@@ -73,7 +82,8 @@
         "buy_buttons",
         "availability",
         "extra",
-        "description"
+        "description",
+        "b8f0b091-0dd5-4b9f-88e3-9596dceab2ee"
       ],
       "settings": {
         "hide_variants": false,
@@ -93,10 +103,104 @@
         "spacing_top": 60,
         "spacing_bottom": 60
       }
+    },
+    "dd7c0595-61d6-410b-96ff-b6ef1f93bef0": {
+      "type": "map",
+      "disabled": true,
+      "blocks": {
+        "template--17312061817136__dd7c0595-61d6-410b-96ff-b6ef1f93bef0-167512792653b7e2c0-0": {
+          "type": "location",
+          "settings": {
+            "address": "Athens, Greece",
+            "title": "Location",
+            "address_label": "<p>5241 Van Sig Str<br>Hochkins, Florida<br>51901, United States<\/p><p><strong>(555) 555-5555<\/strong><\/p>",
+            "address_info_window": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--17312061817136__dd7c0595-61d6-410b-96ff-b6ef1f93bef0-167512792653b7e2c0-0"
+      ],
+      "settings": {
+        "heading": "Our Stores",
+        "google_maps_api_key": "",
+        "zoom": 14,
+        "custom_colors_enabled": false,
+        "foreground_color": "#222222",
+        "background_color": "#ffffff",
+        "color_scheme": "background-1",
+        "spacing_top": 60,
+        "spacing_bottom": 60
+      }
+    },
+    "427642b4-2b9c-4547-a7d6-1f1cf4e909dc": {
+      "type": "multicolumn",
+      "disabled": true,
+      "blocks": {
+        "template--17312061817136__427642b4-2b9c-4547-a7d6-1f1cf4e909dc-167512804606b6f2db-0": {
+          "type": "column",
+          "settings": {
+            "image_width": 550,
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--17312061817136__427642b4-2b9c-4547-a7d6-1f1cf4e909dc-167512804606b6f2db-1": {
+          "type": "column",
+          "settings": {
+            "image_width": 550,
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--17312061817136__427642b4-2b9c-4547-a7d6-1f1cf4e909dc-167512804606b6f2db-2": {
+          "type": "column",
+          "settings": {
+            "image_width": 550,
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "47db7b0e-73c8-4795-8873-03592d6837ff": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "image_width": 550,
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--17312061817136__427642b4-2b9c-4547-a7d6-1f1cf4e909dc-167512804606b6f2db-0",
+        "template--17312061817136__427642b4-2b9c-4547-a7d6-1f1cf4e909dc-167512804606b6f2db-1",
+        "template--17312061817136__427642b4-2b9c-4547-a7d6-1f1cf4e909dc-167512804606b6f2db-2",
+        "47db7b0e-73c8-4795-8873-03592d6837ff"
+      ],
+      "settings": {
+        "title": "Multicolumn",
+        "columns": 3,
+        "column_alignment": "left",
+        "button_label": "Button label",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "spacing_top": 60,
+        "spacing_bottom": 60
+      }
     }
   },
   "order": [
     "main",
-    "recommendations"
+    "recommendations",
+    "dd7c0595-61d6-410b-96ff-b6ef1f93bef0",
+    "427642b4-2b9c-4547-a7d6-1f1cf4e909dc"
   ]
 }
