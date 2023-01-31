@@ -79,7 +79,7 @@
           "settings": {
             "title": "Documents",
             "icon": "document",
-            "custom_liquid": "<ul><li>\n<a href=\"https:\/\/www.ouellet.com\/ouellet.com\/files\/d9\/d91a330e-313d-4e63-abc5-ecb5964ab414.pdf\" target=\"_blank\"><u>Product Sheet<\/u>\n<\/a>\n<\/li>\n<li>\n<a href=\"https:\/\/www.ouellet.com\/ouellet.com\/files\/d9\/d91a330e-313d-4e63-abc5-ecb5964ab414.pdf\" target=\"_blank\"><u>Technical Specifications<\/u><\/a>\n<\/li>\n<\/ul>",
+            "custom_liquid": "<ul>\n    <li>\n        <a href=\"{{ product.metafields.custom.product_sheet }}\" target=\"_blank\"><u>Product Sheet<\/u><\/a>\n    <\/li>\n    <li>\n        <a href=\"{{ product.metafields.custom.technical_specs }}\" target=\"_blank\"><u>Technical Specifications<\/u><\/a>\n    <\/li>\n<\/ul>",
             "position": "left",
             "expanded": false
           }
