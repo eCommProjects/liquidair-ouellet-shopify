@@ -72,6 +72,16 @@
             "text": "<ul><li><a href=\"https:\/\/www.ouellet.com\/ouellet.com\/files\/d9\/d91a330e-313d-4e63-abc5-ecb5964ab414.pdf\" target=\"_blank\" title=\"https:\/\/www.ouellet.com\/ouellet.com\/files\/d9\/d91a330e-313d-4e63-abc5-ecb5964ab414.pdf\">Product Sheet<\/a><\/li><li><a href=\"https:\/\/www.ouellet.com\/ouellet.com\/files\/d9\/d91a330e-313d-4e63-abc5-ecb5964ab414.pdf\" target=\"_blank\" title=\"https:\/\/www.ouellet.com\/ouellet.com\/files\/d9\/d91a330e-313d-4e63-abc5-ecb5964ab414.pdf\">Technical Specifications<\/a><\/li><\/ul>",
             "expanded": false
           }
+        },
+        "d5cfa5c9-d0fa-4f34-8ac5-36da6a9c20cf": {
+          "type": "custom_liquid",
+          "settings": {
+            "title": "Documents",
+            "icon": "",
+            "custom_liquid": "<a href=\"https:\/\/www.ouellet.com\/ouellet.com\/files\/d9\/d91a330e-313d-4e63-abc5-ecb5964ab414.pdf\" target=\"_blank\"><u>Product Sheet<\/u><\/a>",
+            "position": "right",
+            "expanded": false
+          }
         }
       },
       "block_order": [
@@ -83,7 +93,8 @@
         "availability",
         "extra",
         "description",
-        "b8f0b091-0dd5-4b9f-88e3-9596dceab2ee"
+        "b8f0b091-0dd5-4b9f-88e3-9596dceab2ee",
+        "d5cfa5c9-d0fa-4f34-8ac5-36da6a9c20cf"
       ],
       "settings": {
         "hide_variants": false,
