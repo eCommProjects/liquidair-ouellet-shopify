@@ -66,6 +66,7 @@
         },
         "b8f0b091-0dd5-4b9f-88e3-9596dceab2ee": {
           "type": "expandable",
+          "disabled": true,
           "settings": {
             "title": "Documents",
             "icon": "document",
