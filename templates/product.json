@@ -67,7 +67,7 @@
         "b8f0b091-0dd5-4b9f-88e3-9596dceab2ee": {
           "type": "expandable",
           "settings": {
-            "title": "Title",
+            "title": "Documents",
             "icon": "document",
             "text": "<p><a href=\"https:\/\/www.ouellet.com\/ouellet.com\/files\/d9\/d91a330e-313d-4e63-abc5-ecb5964ab414.pdf\" target=\"_blank\" title=\"https:\/\/www.ouellet.com\/ouellet.com\/files\/d9\/d91a330e-313d-4e63-abc5-ecb5964ab414.pdf\">Product Sheet<\/a><\/p>",
             "expanded": false
