@@ -81,7 +81,7 @@
             "icon": "document",
             "custom_liquid": "{% assign file_object = product.metafields.custom.product_sheet.value %}\n{% if file_object != blank %} \n <div class = \"file-reference\">\n  {% assign file_url = file_object.url %}\n  {% assign file_name_with_shopify_extension = file_url | split: '\/' | last %}\n  {% assign file_name = file_name_with_shopify_extension | split: '?' | first %}\n   <a href = \"{{file_url}}\" target=\"_blank\">\n    <div class = \"file-name\">\n    {{ file_name }}\n   <\/div>\n  <\/a> \n <\/div>\n{% endif %}",
             "position": "left",
-            "expanded": false
+            "expanded": true
           }
         }
       },
