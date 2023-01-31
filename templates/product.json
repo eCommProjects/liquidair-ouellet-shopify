@@ -79,7 +79,7 @@
           "settings": {
             "title": "Documents",
             "icon": "document",
-            "custom_liquid": "<ul>\n    <li>\n        <a href=\"{{ product.metafields.custom.product_sheet }}\" target=\"_blank\"><u>Product Sheet<\/u><\/a>\n    <\/li>\n    <li>\n        <a href=\"{{ product.metafields.custom.technical_specs }}\" target=\"_blank\"><u>Technical Specifications<\/u><\/a>\n    <\/li>\n<\/ul>",
+            "custom_liquid": "{% assign file_object = product.metafields.custom.product_sheet.value %}\n{% if file_object != blank %} \n <div class = \"file-reference\">\n  {% assign file_url = file_object.url %}\n  {% assign file_name_with_shopify_extension = file_url | split: '\/' | last %}\n  {% assign file_name = file_name_with_shopify_extension | split: '?' | first %}\n   <a href = \"{{file_url}}\" target=\"_blank\">\n    <div class = \"file-name\">\n    {{ file_name }}\n   <\/div>\n  <\/a> \n <\/div>\n{% endif %}",
             "position": "left",
             "expanded": false
           }
