@@ -159,19 +159,11 @@
       "footer": {
         "type": "footer",
         "blocks": {
-          "footer-0": {
-            "type": "text",
-            "settings": {
-              "title": "Optional title",
-              "image_width": 340,
-              "text": "<p>Share information such as the store's physical address, contact details, opening hours, etc.<\/p>"
-            }
-          },
           "footer-1": {
             "type": "menu",
             "settings": {
-              "title": "Optional title",
-              "menu": "footer"
+              "title": "Main menu",
+              "menu": "main-menu"
             }
           },
           "footer-2": {
@@ -191,7 +183,6 @@
           }
         },
         "block_order": [
-          "footer-0",
           "footer-1",
           "footer-2",
           "footer-3"
