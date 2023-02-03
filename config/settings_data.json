@@ -169,7 +169,7 @@
           "footer-2": {
             "type": "menu",
             "settings": {
-              "title": "Optional title",
+              "title": "About",
               "menu": "footer"
             }
           },
