@@ -175,6 +175,7 @@
           },
           "footer-3": {
             "type": "text",
+            "disabled": true,
             "settings": {
               "title": "Optional title",
               "image_width": 340,
