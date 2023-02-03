@@ -21,6 +21,7 @@
     "typography_body_size": 110,
     "favicon": "shopify:\/\/shop_images\/Screenshot_2022-12-07_at_9.43.15_PM.png",
     "breadcrumbs_enabled": true,
+    "button_top_enabled": true,
     "buttons_style": "solid",
     "buttons_shape": "rounded",
     "buttons_font": "body",
