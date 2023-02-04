@@ -219,7 +219,7 @@
     },
     "collection": {
       "title": "Collection",
-      "empty": "Sorry, this collection is empty for now. We are currently working on our product catalog, subscribe to our newsletter below to know when new products are available!",
+      "empty": "Sorry, this collection is empty for now. We are currently working on our product catalog, <b>subscribe to our newsletter below<\/b> to know when new products are available!",
       "no_products_title": "No products found",
       "use_fewer_filters_html": "Use fewer filters or <facet-remove><a href=\"{{ link }}\" class=\"{{ class }}\">clear all<\/a><\/facet-remove>",
       "results_with_count": {
