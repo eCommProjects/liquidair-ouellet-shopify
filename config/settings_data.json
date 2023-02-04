@@ -148,7 +148,7 @@
         "settings": {
           "newsletter_enable": true,
           "title": "Our newsletter",
-          "text": "Subscribe to our newsletter and receive special offers",
+          "text": "Subscribe to our newsletter to receive special offers and new product alerts",
           "consent_checkbox": false,
           "consent_text": "<p>I agree to receive marketing emails and special deals.<\/p>",
           "color_scheme": "accent-1",
