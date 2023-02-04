@@ -278,7 +278,7 @@
         "f01e5857-99ed-42b2-8f79-babcb1d6fa30": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "window-air-conditioners",
             "overlay_background": "linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8) 100%)",
             "button_text": "",
             "button_type_link": false,
