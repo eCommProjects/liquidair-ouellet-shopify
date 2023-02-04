@@ -99,33 +99,33 @@
           "footer-features-0": {
             "type": "feature",
             "settings": {
-              "icon": "check",
-              "title": "Feature",
-              "text": "<p>Pair text with an icon to focus on your store's features.<\/p>"
+              "icon": "label",
+              "title": "Lowest Prices",
+              "text": "<p>Save 50% or more off retail! Found a lower price tag elsewhere? Contact us and we will match it.<\/p>"
             }
           },
           "footer-features-1": {
             "type": "feature",
             "settings": {
-              "icon": "check",
-              "title": "Feature",
-              "text": "<p>Pair text with an icon to focus on your store's features.<\/p>"
+              "icon": "home",
+              "title": "Proudly Canadian",
+              "text": "<p>Liquidair is proud to be a Canadian company, with years of experience in HVAC systems.<\/p>"
             }
           },
           "footer-features-2": {
             "type": "feature",
             "settings": {
-              "icon": "check",
-              "title": "Feature",
-              "text": "<p>Pair text with an icon to focus on your store's features.<\/p>"
+              "icon": "truck",
+              "title": "Fast & Free Shipping",
+              "text": "<p>All discounted items include free shipping. All orders are handled promptly and shipped with care!<\/p>"
             }
           },
           "footer-features-3": {
             "type": "feature",
             "settings": {
-              "icon": "check",
-              "title": "Feature",
-              "text": "<p>Pair text with an icon to focus on your store's features.<\/p>"
+              "icon": "percent",
+              "title": "Quantity discounts",
+              "text": "<p>Need multiple units for your project? <a href=\"#\">Contact us<\/a> to discuss B2B pricing.<\/p>"
             }
           }
         },
