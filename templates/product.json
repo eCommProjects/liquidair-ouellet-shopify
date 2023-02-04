@@ -50,6 +50,7 @@
         },
         "extra": {
           "type": "extra",
+          "disabled": true,
           "settings": {
             "text": "<p>Use this text to encourage <strong>communication<\/strong> or promote <strong>sharing<\/strong> on social networks.<\/p><p><a href=\"#\">You can also add links<\/a><\/p>",
             "show_facebook": true,
