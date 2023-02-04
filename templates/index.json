@@ -67,6 +67,7 @@
         },
         "collection-2": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "acd",
             "image": "shopify:\/\/shop_images\/Screenshot_2022-12-10_at_7.11.00_PM-removebg-preview.png"
@@ -74,6 +75,7 @@
         },
         "collection-4": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "dimplex"
           }
@@ -93,12 +95,14 @@
         },
         "collection-5": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "kinghome"
           }
         },
         "collection-3": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "dettson"
           }
@@ -116,7 +120,7 @@
       "settings": {
         "heading": "Shop by brand",
         "layout": "slider",
-        "columns": 5,
+        "columns": 3,
         "stack_on_mobile": false,
         "image_ratio": "adapt",
         "color_scheme": "background-1",
