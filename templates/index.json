@@ -395,9 +395,8 @@
     },
     "featured-collection-2": {
       "type": "featured-collection",
-      "disabled": true,
       "settings": {
-        "collection": "baseboard-heaters",
+        "collection": "window-air-conditioners",
         "products_to_show": 3,
         "products": [
 
@@ -407,33 +406,15 @@
         "show_stock": true,
         "show_rating": false,
         "show_collection": true,
-        "collection_overlay_background": "linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8) 100%)",
+        "collection_overlay_background": "linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8) 100%)",
         "collection_title": "",
-        "collection_description": "",
+        "collection_description": "<p> <\/p>",
         "collection_text_color": "#ffffff",
-        "collection_button_text": "",
-        "collection_box_align": "bottom-left",
+        "collection_button_text": "Shop",
+        "collection_box_align": "middle-center",
         "layout": "grid",
         "columns": "4",
         "stack_on_mobile": false,
-        "color_scheme": "background-1",
-        "spacing_top": 60,
-        "spacing_bottom": 60
-      }
-    },
-    "blog": {
-      "type": "blog-posts",
-      "disabled": true,
-      "settings": {
-        "heading": "Blog posts",
-        "link_title": "Visit our blog",
-        "link_url": "\/blogs\/news",
-        "blog": "news",
-        "posts_to_show": 4,
-        "show_date": true,
-        "show_author": false,
-        "columns": "4",
-        "stack_on_mobile": true,
         "color_scheme": "background-1",
         "spacing_top": 60,
         "spacing_bottom": 60
@@ -446,7 +427,6 @@
     "brands",
     "collections-2",
     "tabs",
-    "featured-collection-2",
-    "blog"
+    "featured-collection-2"
   ]
 }
