@@ -203,7 +203,7 @@
       "taxes_and_shipping_policy_at_checkout_html": "Les taxes et <a href=\"{{ link }}\">l'expédition<\/a> sont calculées à la caisse",
       "taxes_and_shipping_at_checkout": "Les taxes et l'expédition sont calculées à la caisse",
       "update": "Actualiser",
-      "checkout": "Vérification de la commande",
+      "checkout": "Commander",
       "empty": "Votre panier est vide",
       "cart_error": "Une erreur s'est produite lors de l'actualisation de votre panier. Veuillez réessayer.",
       "cart_quantity_error_html": "Vous ne pouvez ajouter que {{ quantity }} de cet article dans votre panier.",
