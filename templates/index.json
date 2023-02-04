@@ -163,6 +163,21 @@
     "collections-2": {
       "type": "collection-list",
       "blocks": {
+        "collection-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "dehumidifiers",
+            "overlay_background": "linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8) 100%)",
+            "button_text": "",
+            "button_type_link": false,
+            "button_color_scheme": "button-primary",
+            "heading_size": "md",
+            "text_color": "#ffffff",
+            "box_align": "bottom-left",
+            "mobile_heading_size": "md",
+            "mobile_box_align": "bottom-left"
+          }
+        },
         "011152c8-4e64-4eaf-84a6-3f17cab1fe2f": {
           "type": "collection",
           "settings": {
@@ -172,7 +187,7 @@
             "button_type_link": false,
             "button_color_scheme": "button-primary",
             "heading_size": "md",
-            "text_color": "#fff",
+            "text_color": "#ffffff",
             "box_align": "bottom-left",
             "mobile_heading_size": "md",
             "mobile_box_align": "bottom-left"
@@ -187,7 +202,7 @@
             "button_type_link": false,
             "button_color_scheme": "button-primary",
             "heading_size": "md",
-            "text_color": "#fff",
+            "text_color": "#ffffff",
             "box_align": "bottom-left",
             "mobile_heading_size": "md",
             "mobile_box_align": "bottom-left"
@@ -274,32 +289,17 @@
             "mobile_heading_size": "md",
             "mobile_box_align": "bottom-left"
           }
-        },
-        "collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": "dehumidifiers",
-            "overlay_background": "linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8) 100%)",
-            "button_text": "",
-            "button_type_link": false,
-            "button_color_scheme": "button-primary",
-            "heading_size": "md",
-            "text_color": "#ffffff",
-            "box_align": "bottom-left",
-            "mobile_heading_size": "md",
-            "mobile_box_align": "bottom-left"
-          }
         }
       },
       "block_order": [
+        "collection-1",
         "011152c8-4e64-4eaf-84a6-3f17cab1fe2f",
         "f01e5857-99ed-42b2-8f79-babcb1d6fa30",
         "collection-0",
         "collection-2",
         "collection-3",
         "collection-4",
-        "collection-5",
-        "collection-1"
+        "collection-5"
       ],
       "settings": {
         "heading": "Popular categories",
