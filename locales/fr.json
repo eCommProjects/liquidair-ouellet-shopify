@@ -41,7 +41,7 @@
       "load_more": "Charger plus"
     },
     "collection": {
-      "shop_collection": "Magasiner"
+      "shop_collection": "Magasiner {{ title }}"
     },
     "button_top": "Défiler vers le haut de la page"
   },
