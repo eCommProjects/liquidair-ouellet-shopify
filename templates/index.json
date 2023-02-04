@@ -163,17 +163,16 @@
     "collections-2": {
       "type": "collection-list",
       "blocks": {
-        "collection-0": {
+        "011152c8-4e64-4eaf-84a6-3f17cab1fe2f": {
           "type": "collection",
           "settings": {
-            "collection": "air-conditioners-heat-pumps",
-            "image": "shopify:\/\/shop_images\/Screenshot_2022-12-23_at_2.56.06_PM.png",
+            "collection": "portable-air-conditioners",
             "overlay_background": "linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8) 100%)",
             "button_text": "",
             "button_type_link": false,
             "button_color_scheme": "button-primary",
             "heading_size": "md",
-            "text_color": "#ffffff",
+            "text_color": "#fff",
             "box_align": "bottom-left",
             "mobile_heading_size": "md",
             "mobile_box_align": "bottom-left"
@@ -194,8 +193,26 @@
             "mobile_box_align": "bottom-left"
           }
         },
+        "collection-0": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "air-conditioners-heat-pumps",
+            "image": "shopify:\/\/shop_images\/Screenshot_2022-12-23_at_2.56.06_PM.png",
+            "overlay_background": "linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8) 100%)",
+            "button_text": "",
+            "button_type_link": false,
+            "button_color_scheme": "button-primary",
+            "heading_size": "md",
+            "text_color": "#ffffff",
+            "box_align": "bottom-left",
+            "mobile_heading_size": "md",
+            "mobile_box_align": "bottom-left"
+          }
+        },
         "collection-2": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "unit-heaters",
             "overlay_background": "linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8) 100%)",
@@ -211,6 +228,7 @@
         },
         "collection-3": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "convectors-wall-heaters",
             "overlay_background": "linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8) 100%)",
@@ -226,6 +244,7 @@
         },
         "collection-4": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "floor-heating-cables",
             "overlay_background": "linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8) 100%)",
@@ -241,6 +260,7 @@
         },
         "collection-5": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "baseboard-heaters",
             "image": "shopify:\/\/shop_images\/Screenshot_2022-12-23_at_2.51.32_PM.png",
@@ -254,15 +274,32 @@
             "mobile_heading_size": "md",
             "mobile_box_align": "bottom-left"
           }
+        },
+        "f01e5857-99ed-42b2-8f79-babcb1d6fa30": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "overlay_background": "linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8) 100%)",
+            "button_text": "",
+            "button_type_link": false,
+            "button_color_scheme": "button-primary",
+            "heading_size": "md",
+            "text_color": "#fff",
+            "box_align": "bottom-left",
+            "mobile_heading_size": "md",
+            "mobile_box_align": "bottom-left"
+          }
         }
       },
       "block_order": [
-        "collection-0",
+        "011152c8-4e64-4eaf-84a6-3f17cab1fe2f",
         "collection-1",
+        "collection-0",
         "collection-2",
         "collection-3",
         "collection-4",
-        "collection-5"
+        "collection-5",
+        "f01e5857-99ed-42b2-8f79-babcb1d6fa30"
       ],
       "settings": {
         "heading": "Popular categories",
