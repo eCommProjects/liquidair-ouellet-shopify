@@ -1,6 +1,6 @@
 {
   "general": {
-    "continue_shopping": "Continuer vos achats",
+    "continue_shopping": "Continuer à magasiner",
     "form": {
       "error_heading": "Régler ce qui suit:"
     },
@@ -41,7 +41,7 @@
       "load_more": "Charger plus"
     },
     "collection": {
-      "shop_collection": "Achat {{ title }}"
+      "shop_collection": "Magasiner {{ title }}"
     },
     "button_top": "Défiler vers le haut de la page"
   },
