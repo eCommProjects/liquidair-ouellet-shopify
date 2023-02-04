@@ -97,21 +97,6 @@
             "collection": "gree"
           }
         },
-        "collection-2": {
-          "type": "collection",
-          "disabled": true,
-          "settings": {
-            "collection": "acd",
-            "image": "shopify:\/\/shop_images\/Screenshot_2022-12-10_at_7.11.00_PM-removebg-preview.png"
-          }
-        },
-        "collection-4": {
-          "type": "collection",
-          "disabled": true,
-          "settings": {
-            "collection": "dimplex"
-          }
-        },
         "collection-0": {
           "type": "collection",
           "settings": {
@@ -125,16 +110,27 @@
             "collection": "ouellet"
           }
         },
+        "collection-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "acd",
+            "image": "shopify:\/\/shop_images\/Screenshot_2022-12-10_at_7.11.00_PM-removebg-preview.png"
+          }
+        },
+        "collection-4": {
+          "type": "collection",
+          "settings": {
+            "collection": "dimplex"
+          }
+        },
         "collection-5": {
           "type": "collection",
-          "disabled": true,
           "settings": {
             "collection": "kinghome"
           }
         },
         "collection-3": {
           "type": "collection",
-          "disabled": true,
           "settings": {
             "collection": "dettson"
           }
@@ -142,10 +138,10 @@
       },
       "block_order": [
         "collection-1",
-        "collection-2",
-        "collection-4",
         "collection-0",
         "collection-6",
+        "collection-2",
+        "collection-4",
         "collection-5",
         "collection-3"
       ],
