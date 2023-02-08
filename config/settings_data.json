@@ -96,6 +96,14 @@
       "footer-features": {
         "type": "footer-features",
         "blocks": {
+          "footer-features-3": {
+            "type": "feature",
+            "settings": {
+              "icon": "percent",
+              "title": "Quantity discounts",
+              "text": "<p>Need multiple units for your project? <a href=\"#\">Contact us<\/a> to discuss business pricing (B2B).<\/p>"
+            }
+          },
           "footer-features-0": {
             "type": "feature",
             "settings": {
@@ -119,21 +127,13 @@
               "title": "Fast & Free Shipping",
               "text": "<p>All discounted items include free shipping. All orders are handled promptly and shipped with care!<\/p>"
             }
-          },
-          "footer-features-3": {
-            "type": "feature",
-            "settings": {
-              "icon": "percent",
-              "title": "Quantity discounts",
-              "text": "<p>Need multiple units for your project? <a href=\"#\">Contact us<\/a> to discuss business pricing (B2B).<\/p>"
-            }
           }
         },
         "block_order": [
+          "footer-features-3",
           "footer-features-0",
           "footer-features-1",
-          "footer-features-2",
-          "footer-features-3"
+          "footer-features-2"
         ],
         "settings": {
           "inline": false,
