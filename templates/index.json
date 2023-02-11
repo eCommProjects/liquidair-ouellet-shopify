@@ -106,12 +106,14 @@
         },
         "collection-6": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "ouellet"
           }
         },
         "collection-2": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "acd",
             "image": "shopify:\/\/shop_images\/Screenshot_2022-12-10_at_7.11.00_PM-removebg-preview.png"
@@ -119,20 +121,29 @@
         },
         "collection-4": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "dimplex"
           }
         },
         "collection-5": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "kinghome"
           }
         },
         "collection-3": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "dettson"
+          }
+        },
+        "7049174a-2689-4e67-9264-73d925cf5d78": {
+          "type": "collection",
+          "settings": {
+            "collection": "global-commander"
           }
         }
       },
@@ -143,7 +154,8 @@
         "collection-2",
         "collection-4",
         "collection-5",
-        "collection-3"
+        "collection-3",
+        "7049174a-2689-4e67-9264-73d925cf5d78"
       ],
       "settings": {
         "heading": "Shop by brand",
