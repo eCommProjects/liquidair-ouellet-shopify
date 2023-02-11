@@ -251,7 +251,6 @@
         },
         "collection-3": {
           "type": "collection",
-          "disabled": true,
           "settings": {
             "collection": "convectors-wall-heaters",
             "overlay_background": "linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8) 100%)",
