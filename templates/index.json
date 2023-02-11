@@ -59,15 +59,14 @@
     "featured-collection-1": {
       "type": "featured-collection",
       "settings": {
-        "collection": "air-conditionners",
+        "collection": "heating",
         "products_to_show": 6,
         "products": [
-          "window-air-conditionner-tosot-series-wat-b",
-          "window-air-conditionner-tosot-wat-m-series",
-          "window-air-conditionner-tosot-series-wat-bv-a6nrnc5b",
-          "portable-dehumidifier-tosot-det-series",
+          "dimplex-infrared-patio-heater-240v",
+          "copy-of-dimplex-indoor-outdoor-electric-infrared-heater-240v",
           "portable-air-conditionner-tosot-gpc-series",
-          "window-air-conditionner-tosot-series-wat-bv-a6nrnc5b-1"
+          "residential-fan-heater-120v",
+          "rfi-commercial-fan-forced-heater-white"
         ],
         "heading": "Deals of the week",
         "show_vendor": true,
