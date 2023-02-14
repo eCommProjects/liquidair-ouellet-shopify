@@ -40,7 +40,7 @@
           "settings": {
             "show_quantity": true,
             "show_add_to_cart": true,
-            "show_buy_now": true
+            "show_buy_now": false
           }
         },
         "availability": {
