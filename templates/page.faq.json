@@ -5,5 +5,8 @@
       "settings": {
       }
     }
-  }
+  },
+  "order": [
+    "main"
+  ]
 }
