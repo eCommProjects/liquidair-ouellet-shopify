@@ -6,12 +6,14 @@
 
 <div class="container container-narrow">
   <h1 class="page-title">
-    allo
+    {{ page.title | escape }}
   </h1>
 </div>
 
 <div class="container container-narrow">
-
+  <h2 class="main-page-title page-title h0">
+    {{ section.settings.faq_title | escape }}
+  </h2>
   <div class="faq-container">
     <div class="tabs">
       {% for block in section.blocks %}
