@@ -2,7 +2,20 @@
   "sections": {
     "main": {
       "type": "main-page-faq",
+      "blocks": {
+        "f1aecf11-ae91-44a7-adbc-db2d7379bc37": {
+          "type": "faq",
+          "settings": {
+            "question": "Do you have a question?",
+            "answer": "<p>I have an answer<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "f1aecf11-ae91-44a7-adbc-db2d7379bc37"
+      ],
       "settings": {
+        "faq_title": "Frequently Asked Questions"
       }
     }
   },
