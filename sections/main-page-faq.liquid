@@ -3,11 +3,15 @@
   href="{{ 'faq-style.css' | asset_url }}"
   media="print"
   onload="this.media='all'">
-<div class="block-section">
-  <h1 class="page-title">
-    {{ page.title | escape }}
-  </h1>
+
+<div class="container container-narrow">
+  <div class="block-section">
+    <h1 class="page-title">
+      {{ page.title | escape }}
+    </h1>
+  </div>
 </div>
+
 <div class="container container-narrow">
   <div class="faq-container">
     <div class="tabs">
