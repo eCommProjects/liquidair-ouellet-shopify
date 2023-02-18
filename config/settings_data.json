@@ -163,7 +163,7 @@
             "type": "menu",
             "settings": {
               "title": "Product categories",
-              "menu": "main-menu"
+              "menu": "footer-popular-categories"
             }
           },
           "footer-2": {
