@@ -1,5 +1,26 @@
 {
   "sections": {
+    "3164fe86-637f-4b70-b222-a0fab4af65b3": {
+      "type": "rich-text",
+      "blocks": {
+        "template--18061038813488__3164fe86-637f-4b70-b222-a0fab4af65b3-16767515300eac0922-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "FAQ"
+          }
+        }
+      },
+      "block_order": [
+        "template--18061038813488__3164fe86-637f-4b70-b222-a0fab4af65b3-16767515300eac0922-0"
+      ],
+      "settings": {
+        "narrow": true,
+        "overlay_background": "",
+        "color_scheme": "background-1",
+        "spacing_top": 60,
+        "spacing_bottom": 60
+      }
+    },
     "main": {
       "type": "main-page-faq",
       "blocks": {
@@ -17,9 +38,29 @@
       "settings": {
         "faq_title": "Frequently Asked Questions"
       }
+    },
+    "d4c9b781-482c-4eb9-aae3-406b4bb2b3d8": {
+      "type": "main-page-faq",
+      "blocks": {
+        "d2838b2a-f75e-41e0-b5b3-95281293d460": {
+          "type": "faq",
+          "settings": {
+            "question": "Do you have a question?",
+            "answer": "<p>I have an answer<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "d2838b2a-f75e-41e0-b5b3-95281293d460"
+      ],
+      "settings": {
+        "faq_title": "Frequently Asked Questions"
+      }
     }
   },
   "order": [
-    "main"
+    "3164fe86-637f-4b70-b222-a0fab4af65b3",
+    "main",
+    "d4c9b781-482c-4eb9-aae3-406b4bb2b3d8"
   ]
 }
