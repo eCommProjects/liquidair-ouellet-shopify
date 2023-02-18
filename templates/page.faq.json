@@ -1,5 +1,14 @@
 {
   "sections": {
+    "2d75b566-4c6d-4926-a761-7d145185c5da": {
+      "type": "custom-liquid",
+      "settings": {
+        "title": "",
+        "full_width": false,
+        "liquid": "<div class=\"container container-narrow\">\n<h1 class=\"page-title\">\n\t\t\t{{ page.title | escape }}\n\t\t<\/h1>\n<\/dev>",
+        "color_scheme": "background-1"
+      }
+    },
     "27a6b8a6-a680-4146-b1ed-f3bd4dbadde0": {
       "type": "rich-text",
       "blocks": {
@@ -128,6 +137,7 @@
     }
   },
   "order": [
+    "2d75b566-4c6d-4926-a761-7d145185c5da",
     "27a6b8a6-a680-4146-b1ed-f3bd4dbadde0",
     "main",
     "65bd9d8d-83d4-4c70-bd01-d96a3d3bd355",
