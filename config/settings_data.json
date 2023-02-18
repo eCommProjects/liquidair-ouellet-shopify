@@ -169,7 +169,14 @@
           "footer-2": {
             "type": "menu",
             "settings": {
-              "title": "About",
+              "title": "USEFUL LINKS",
+              "menu": "footer"
+            }
+          },
+          "9d481f55-15e6-43cc-b284-8830af89f0ca": {
+            "type": "menu",
+            "settings": {
+              "title": "Optional title",
               "menu": "footer"
             }
           },
@@ -186,6 +193,7 @@
         "block_order": [
           "footer-1",
           "footer-2",
+          "9d481f55-15e6-43cc-b284-8830af89f0ca",
           "footer-3"
         ],
         "settings": {
