@@ -1,0 +1,17 @@
+<div class="container container-narrow">
+	<div class="block-section">
+		<h1 class="page-title">
+			{{ page.title | escape }}
+		</h1>
+
+		<div class="rte page-content">
+			{{ page.content }}
+		</div>
+	</div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.main_page.name"
+}
+{% endschema %}
