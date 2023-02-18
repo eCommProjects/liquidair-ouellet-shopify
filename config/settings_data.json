@@ -159,10 +159,18 @@
       "footer": {
         "type": "footer",
         "blocks": {
+          "e61c9918-52ac-4fc1-a352-ed34870a6503": {
+            "type": "text",
+            "settings": {
+              "title": "Liquidair",
+              "image_width": 340,
+              "text": "<p>4442 Chemin Royal<\/p><p>Saint-Jean-de-l'Île-d'Orléans<\/p><p>Quebec, G0A 3W0, Canada<\/p>"
+            }
+          },
           "footer-1": {
             "type": "menu",
             "settings": {
-              "title": "Main menu",
+              "title": "Popular categories",
               "menu": "main-menu"
             }
           },
@@ -175,15 +183,15 @@
           },
           "footer-3": {
             "type": "text",
-            "disabled": true,
             "settings": {
-              "title": "Optional title",
+              "title": "PAY SECURELY",
               "image_width": 340,
-              "text": "<p>Share information such as the store's physical address, contact details, opening hours, etc.<\/p>"
+              "text": "<p>We take your security and privacy very seriously. We do not keep or store Credit\/Debit card details once they have been processed.<\/p>"
             }
           }
         },
         "block_order": [
+          "e61c9918-52ac-4fc1-a352-ed34870a6503",
           "footer-1",
           "footer-2",
           "footer-3"
