@@ -159,14 +159,6 @@
       "footer": {
         "type": "footer",
         "blocks": {
-          "93ab6942-cb72-48f9-aa50-86d9243d7da3": {
-            "type": "text",
-            "settings": {
-              "title": "Business Information",
-              "image_width": 340,
-              "text": "<p>Distribution Liquidair Inc.<\/p><p>4442 Chem. Royal, Saint-Jean-de-l'Île-d'Orléans, QC, G0A 3W0<\/p>"
-            }
-          },
           "footer-1": {
             "type": "menu",
             "settings": {
@@ -177,8 +169,16 @@
           "footer-2": {
             "type": "menu",
             "settings": {
-              "title": "About",
+              "title": "USEFUL LINKS",
               "menu": "footer"
+            }
+          },
+          "93ab6942-cb72-48f9-aa50-86d9243d7da3": {
+            "type": "text",
+            "settings": {
+              "title": "Business Information",
+              "image_width": 340,
+              "text": "<p>Distribution Liquidair Inc.<\/p><p>4442 Chem. Royal, Saint-Jean-de-l'Île-d'Orléans, QC, G0A 3W0<\/p>"
             }
           },
           "footer-3": {
@@ -191,9 +191,9 @@
           }
         },
         "block_order": [
-          "93ab6942-cb72-48f9-aa50-86d9243d7da3",
           "footer-1",
           "footer-2",
+          "93ab6942-cb72-48f9-aa50-86d9243d7da3",
           "footer-3"
         ],
         "settings": {
