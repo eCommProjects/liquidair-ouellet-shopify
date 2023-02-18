@@ -101,7 +101,7 @@
             "settings": {
               "icon": "percent",
               "title": "Quantity discounts",
-              "text": "<p>Need multiple units for your project? <a href=\"#\">Contact us<\/a> to discuss business pricing (B2B).<\/p>"
+              "text": "<p>Need multiple units for your project? <a href=\"\/pages\/corporate-deals\" title=\"Corporate Deals\">Contact us<\/a> to discuss business pricing (B2B).<\/p>"
             }
           },
           "footer-features-0": {
