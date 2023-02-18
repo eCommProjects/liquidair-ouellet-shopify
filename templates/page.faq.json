@@ -101,46 +101,11 @@
       "settings": {
         "faq_title": "Frequently Asked Questions"
       }
-    },
-    "2cbf5ec4-9235-40ed-a724-d74367588c76": {
-      "type": "main-page-faq",
-      "blocks": {
-        "1e0788ca-d214-4cc1-aa60-49a89bc8b1d5": {
-          "type": "faq",
-          "settings": {
-            "question": "Do you have a question?",
-            "answer": "<p>I have an answer<\/p>"
-          }
-        },
-        "9aad96d1-b3c7-4b62-936e-5212c5730ea8": {
-          "type": "faq",
-          "settings": {
-            "question": "Do you have a question?",
-            "answer": "<p>I have an answer<\/p>"
-          }
-        },
-        "f344998f-6152-4fdc-9a76-7740ac4cabd2": {
-          "type": "faq",
-          "settings": {
-            "question": "Do you have a question?",
-            "answer": "<p>I have an answer<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "1e0788ca-d214-4cc1-aa60-49a89bc8b1d5",
-        "9aad96d1-b3c7-4b62-936e-5212c5730ea8",
-        "f344998f-6152-4fdc-9a76-7740ac4cabd2"
-      ],
-      "settings": {
-        "faq_title": "Frequently Asked Questions"
-      }
     }
   },
   "order": [
     "main",
     "65bd9d8d-83d4-4c70-bd01-d96a3d3bd355",
-    "3e327e2c-292a-43c1-84c0-2450eb890183",
-    "2cbf5ec4-9235-40ed-a724-d74367588c76"
+    "3e327e2c-292a-43c1-84c0-2450eb890183"
   ]
 }
