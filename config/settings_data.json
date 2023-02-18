@@ -199,7 +199,7 @@
         "settings": {
           "payment_enable": true,
           "show_social": false,
-          "color_scheme": "background-2"
+          "color_scheme": "background-1"
         }
       }
     },
