@@ -1,64 +1,17 @@
-<link
-  rel="stylesheet"
-  href="{{ 'faq-style.css' | asset_url }}"
-  media="print"
-  onload="this.media='all'">
-
 <div class="container container-narrow">
   <div class="block-section">
     <h1 class="page-title">
       {{ page.title | escape }}
     </h1>
-  </div>
-</div>
 
-<div class="container container-narrow">
-  <div class="faq-container">
-    <div class="tabs">
-      {% for block in section.blocks %}
-        {% assign item = block.settings %}
-
-        <div class="tab">
-          <input
-            type="checkbox"
-            id="faq_checkbox_{{ forloop.index }}"
-            class="faq-checkbox">
-          <label for="faq_checkbox_{{ forloop.index }}" class="tab-label button button--primary">{{ item.question }}</label>
-          <div class="tab-content">{{ item.answer }}</div>
-        </div>
-      {% endfor %}
+    <div class="rte page-content">
+      {{ page.content }}
     </div>
   </div>
 </div>
 
 {% schema %}
   {
-    "name": "FAQ",
-    "tag": "section",
-    "class": "spaced-section",
-    "blocks": [
-      {
-        "name": "FAQ Item",
-        "type": "faq",
-        "settings": [
-          {
-            "type": "text",
-            "id": "question",
-            "label": "Question",
-            "default": "Do you have a question?"
-          }, {
-            "type": "richtext",
-            "id": "answer",
-            "label": "Answer",
-            "default": "<p>I have an answer</p>"
-          }
-        ]
-      }
-    ],
-    "presets": [
-      {
-        "name": "FAQ Block"
-      }
-    ]
+    "name": "t:sections.main_page.name"
   }
 {% endschema %}
