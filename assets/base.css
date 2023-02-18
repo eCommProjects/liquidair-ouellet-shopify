@@ -3164,7 +3164,7 @@ predictive-search:not([loading]) .predictive-search-status-loading {
 }
 
 .navigation-main > .navigation-main-item:last-child {
-  background-color: var(--color-buttons-secondary-background, var(--color-base-accent-2));
+  background-color: var(--color-buttons-secondary-background);
 }
 
 .navigation-main > .navigation-main-item:hover > a::before,
