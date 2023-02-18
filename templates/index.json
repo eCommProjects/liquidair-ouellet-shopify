@@ -179,7 +179,7 @@
             "button_type_link": false,
             "button_color_scheme": "button-primary",
             "heading_size": "md",
-            "text_color": "#fff",
+            "text_color": "#ffffff",
             "box_align": "bottom-left",
             "mobile_heading_size": "md",
             "mobile_box_align": "bottom-left"
@@ -423,7 +423,7 @@
         "products": [
 
         ],
-        "heading": "Featured category",
+        "heading": "Window Air Conditionners",
         "show_vendor": true,
         "show_stock": true,
         "show_rating": false,
