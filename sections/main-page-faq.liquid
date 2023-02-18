@@ -5,9 +5,11 @@
   onload="this.media='all'">
 
 <div class="container container-narrow">
-  <h1 class="main-page-title page-title h0">
-    {{ section.settings.faq_title | escape }}
-  </h1>
+  <div class="block-section">
+    <h1 class="page-title">
+      {{ page.title | escape }}
+    </h1>
+  </div>
   <div class="faq-container">
     <div class="tabs">
       {% for block in section.blocks %}
