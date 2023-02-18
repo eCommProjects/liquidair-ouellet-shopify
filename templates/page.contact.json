@@ -5,54 +5,14 @@
       "settings": {
       }
     },
-    "d65a9c68-7d73-4aaa-91db-34feca32d450": {
-      "type": "rich-text",
-      "blocks": {
-        "template--17312062570800__d65a9c68-7d73-4aaa-91db-34feca32d450-1676743143811c617d-0": {
-          "type": "heading",
-          "disabled": true,
-          "settings": {
-            "heading": "Talk about your brand"
-          }
-        },
-        "template--17312062570800__d65a9c68-7d73-4aaa-91db-34feca32d450-1676743143811c617d-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>You are an entrepreneur and would be interested in wholesale purchasing? We have prices and special offers for you. Enter your contact informations as well as details of your needs and we will be happy to contact you.<\/p>"
-          }
-        },
-        "template--17312062570800__d65a9c68-7d73-4aaa-91db-34feca32d450-1676743143811c617d-2": {
-          "type": "button",
-          "disabled": true,
-          "settings": {
-            "button_label": "Button label",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--17312062570800__d65a9c68-7d73-4aaa-91db-34feca32d450-1676743143811c617d-0",
-        "template--17312062570800__d65a9c68-7d73-4aaa-91db-34feca32d450-1676743143811c617d-1",
-        "template--17312062570800__d65a9c68-7d73-4aaa-91db-34feca32d450-1676743143811c617d-2"
-      ],
-      "settings": {
-        "narrow": true,
-        "overlay_background": "",
-        "color_scheme": "background-1",
-        "spacing_top": 60,
-        "spacing_bottom": 60
-      }
-    },
     "form": {
       "type": "contact-form",
       "settings": {
-        "title": ""
       }
     }
   },
   "order": [
     "main",
-    "d65a9c68-7d73-4aaa-91db-34feca32d450",
     "form"
   ]
 }
