@@ -2,6 +2,7 @@
   "sections": {
     "3164fe86-637f-4b70-b222-a0fab4af65b3": {
       "type": "rich-text",
+      "disabled": true,
       "blocks": {
         "template--18061038813488__3164fe86-637f-4b70-b222-a0fab4af65b3-16767515300eac0922-0": {
           "type": "heading",
@@ -30,22 +31,29 @@
             "question": "Do you have a question?",
             "answer": "<p>I have an answer<\/p>"
           }
-        }
-      },
-      "block_order": [
-        "f1aecf11-ae91-44a7-adbc-db2d7379bc37"
-      ],
-      "custom_css": [
-        ".container{margin-bottom: 60px;}"
-      ],
-      "settings": {
-        "faq_title": "Frequently Asked Questions"
-      }
-    },
-    "d4c9b781-482c-4eb9-aae3-406b4bb2b3d8": {
-      "type": "main-page-faq",
-      "blocks": {
-        "d2838b2a-f75e-41e0-b5b3-95281293d460": {
+        },
+        "6d0c7add-36b7-4774-bcf8-6432d43b1322": {
+          "type": "faq",
+          "settings": {
+            "question": "Do you have a question?",
+            "answer": "<p>I have an answer<\/p>"
+          }
+        },
+        "2c3760a6-b847-4e47-baa8-56bd5b62a561": {
+          "type": "faq",
+          "settings": {
+            "question": "Do you have a question?",
+            "answer": "<p>I have an answer<\/p>"
+          }
+        },
+        "0eae0a36-9188-413c-829c-eb1425f85428": {
+          "type": "faq",
+          "settings": {
+            "question": "Do you have a question?",
+            "answer": "<p>I have an answer<\/p>"
+          }
+        },
+        "a903f7ad-28cc-4025-a433-2c668f1ac570": {
           "type": "faq",
           "settings": {
             "question": "Do you have a question?",
@@ -54,7 +62,14 @@
         }
       },
       "block_order": [
-        "d2838b2a-f75e-41e0-b5b3-95281293d460"
+        "f1aecf11-ae91-44a7-adbc-db2d7379bc37",
+        "6d0c7add-36b7-4774-bcf8-6432d43b1322",
+        "2c3760a6-b847-4e47-baa8-56bd5b62a561",
+        "0eae0a36-9188-413c-829c-eb1425f85428",
+        "a903f7ad-28cc-4025-a433-2c668f1ac570"
+      ],
+      "custom_css": [
+        ".container {margin-top: 60px; margin-bottom: 60px;}"
       ],
       "settings": {
         "faq_title": "Frequently Asked Questions"
@@ -63,7 +78,6 @@
   },
   "order": [
     "3164fe86-637f-4b70-b222-a0fab4af65b3",
-    "main",
-    "d4c9b781-482c-4eb9-aae3-406b4bb2b3d8"
+    "main"
   ]
 }
