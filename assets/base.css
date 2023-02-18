@@ -3163,9 +3163,13 @@ predictive-search:not([loading]) .predictive-search-status-loading {
   padding-left: 0;
 }
 
+.navigation-main > .navigation-main-item:last-child {
+  background-color: rgb(var(--color-accent-2));
+}
+
 .navigation-main > .navigation-main-item:hover > a::before,
 .navigation-main > .navigation-main-item:focus-within > a::before {
-  border-bottom-color: pink;
+  border-bottom-color: rgb(var(--color-accent-2));
   transition-delay: 0s;
 }
 
