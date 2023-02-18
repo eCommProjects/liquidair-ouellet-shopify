@@ -10,12 +10,12 @@
     <div class="rte page-content">
 		<!--{{ page.content }}-->
 		<div data-tab-component>
-		<div class="page-width">
-			<!--{% section 'faq-orders' %}-->
-			<!--{% section 'faq-returns' %}-->
-		{% section 'faq-products' %}
-			<!--{% section 'faq-warranty' %}-->
-		</div>
+			<div class="page-width">
+				<!--{% section 'faq-orders' %}-->
+				<!--{% section 'faq-returns' %}-->
+				{% render 'faq-products' %}
+				<!--{% section 'faq-warranty' %}-->
+			</div>
 		</div>
   </div>
 
