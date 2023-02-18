@@ -35,6 +35,9 @@
       "block_order": [
         "f1aecf11-ae91-44a7-adbc-db2d7379bc37"
       ],
+      "custom_css": [
+        ".container{margin-bottom: 60px;}"
+      ],
       "settings": {
         "faq_title": "Frequently Asked Questions"
       }
