@@ -2,6 +2,34 @@
   "sections": {
     "main": {
       "type": "main-page-faq",
+      "blocks": {
+        "70466068-b08c-4684-8d94-0610af65320e": {
+          "type": "faq",
+          "settings": {
+            "question": "PENIS",
+            "answer": "<p>DANS TA YEULE<\/p>"
+          }
+        },
+        "ab54557f-e4db-4809-b69b-677d0ad50fa1": {
+          "type": "faq",
+          "settings": {
+            "question": "Do you have a question?",
+            "answer": "<p>I have an answer<\/p>"
+          }
+        },
+        "72862173-e1ae-45f8-b5be-b02e7a4e0bec": {
+          "type": "faq",
+          "settings": {
+            "question": "Do you have a question?",
+            "answer": "<p>I have an answer<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "70466068-b08c-4684-8d94-0610af65320e",
+        "ab54557f-e4db-4809-b69b-677d0ad50fa1",
+        "72862173-e1ae-45f8-b5be-b02e7a4e0bec"
+      ],
       "settings": {
       }
     }
