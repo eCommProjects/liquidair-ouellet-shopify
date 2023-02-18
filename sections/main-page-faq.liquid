@@ -1,45 +1,56 @@
-<div
-  class="container container-narrow information-page faqs"
-  itemscope
-  itemtype="https://schema.org/FAQPage">
+<link
+  rel="stylesheet"
+  href="{{ 'faq-style.css' | asset_url }}"
+  media="print"
+  onload="this.media='all'">
 
-  <div class="block-section">
-    <h1 class="page-title">
-      {{ page.title | escape }}
-    </h1>
-    <div class="rte page-content">
-		<!--{{ page.content }}-->
-		<div data-tab-component>
-			<div class="page-width">
-				<!--{% section 'faq-orders' %}-->
-				<!--{% section 'faq-returns' %}-->
-				{% render 'faq-products' %}
-				<!--{% section 'faq-warranty' %}-->
-			</div>
-		</div>
+<div class="page-width page-width--narrow">
+  <div class="faq-container">
+    <div class="tabs">
+      {% for block in section.blocks %}
+        {% assign item = block.settings %}
+
+        <div class="tab">
+          <input
+            type="checkbox"
+            id="faq_checkbox_{{ forloop.index }}"
+            class="faq-checkbox">
+          <label for="faq_checkbox_{{ forloop.index }}" class="tab-label button button--primary">{{ item.question }}</label>
+          <div class="tab-content">{{ item.answer }}</div>
+        </div>
+      {% endfor %}
+    </div>
   </div>
-
-  <script type="text/javascript">
-    var acc = document.querySelectorAll('[role="tab"]');
-    var i;
-    	
-    		console.log(acc);
-    		for (i = 0; i < acc.length; i++) {
-    		acc[i].addEventListener("click", function() {
-    			this.parentElement.parentElement.classList.toggle("active");
-    			var panel = this.nextElementSibling;
-    			if (panel.style.maxHeight) {
-    			panel.style.maxHeight = null;
-    			} else {
-    			panel.style.maxHeight = panel.scrollHeight + "px";
-    			}
-    		});
-    		}</script>
-
 </div>
 
 {% schema %}
   {
-    "name": "t:sections.main_page.name"
+    "name": "FAQ",
+    "tag": "section",
+    "class": "spaced-section",
+    "blocks": [
+      {
+        "name": "FAQ Item",
+        "type": "faq",
+        "settings": [
+          {
+            "type": "text",
+            "id": "question",
+            "label": "Question",
+            "default": "Do you have a question?"
+          }, {
+            "type": "richtext",
+            "id": "answer",
+            "label": "Answer",
+            "default": "<p>I have an answer</p>"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "FAQ Block"
+      }
+    ]
   }
 {% endschema %}
