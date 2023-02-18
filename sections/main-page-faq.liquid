@@ -12,6 +12,7 @@
     <div class="tabs">
       {% for block in section.blocks %}
         {% assign item = block.settings %}
+        {% assign index = i %}
         <div class="tab">
           <input
             type="checkbox"
