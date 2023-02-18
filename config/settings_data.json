@@ -162,8 +162,8 @@
           "footer-1": {
             "type": "menu",
             "settings": {
-              "title": "Main menu",
-              "menu": "main-menu"
+              "title": "POPULAR CATEGORIES",
+              "menu": "footer-popular-categories"
             }
           },
           "footer-2": {
@@ -176,8 +176,8 @@
           "9d481f55-15e6-43cc-b284-8830af89f0ca": {
             "type": "menu",
             "settings": {
-              "title": "Optional title",
-              "menu": "footer"
+              "title": "Policies, Terms & Conditions",
+              "menu": "footer-policies"
             }
           },
           "footer-3": {
