@@ -1,84 +1,12 @@
 {
   "sections": {
-    "3164fe86-637f-4b70-b222-a0fab4af65b3": {
-      "type": "rich-text",
-      "disabled": true,
-      "blocks": {
-        "template--18061038813488__3164fe86-637f-4b70-b222-a0fab4af65b3-16767515300eac0922-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "FAQ"
-          }
-        }
-      },
-      "block_order": [
-        "template--18061038813488__3164fe86-637f-4b70-b222-a0fab4af65b3-16767515300eac0922-0"
-      ],
-      "settings": {
-        "narrow": true,
-        "overlay_background": "",
-        "color_scheme": "background-1",
-        "spacing_top": 60,
-        "spacing_bottom": 60
-      }
-    },
     "main": {
       "type": "main-page-faq",
-      "blocks": {
-        "f1aecf11-ae91-44a7-adbc-db2d7379bc37": {
-          "type": "faq",
-          "settings": {
-            "question": "Do you have a question?",
-            "answer": "<p>I have an answer<\/p>"
-          }
-        },
-        "6d0c7add-36b7-4774-bcf8-6432d43b1322": {
-          "type": "faq",
-          "settings": {
-            "question": "Do you have a question?",
-            "answer": "<p>I have an answer<\/p>"
-          }
-        },
-        "2c3760a6-b847-4e47-baa8-56bd5b62a561": {
-          "type": "faq",
-          "settings": {
-            "question": "Do you have a question?",
-            "answer": "<p>I have an answer<\/p>"
-          }
-        },
-        "0eae0a36-9188-413c-829c-eb1425f85428": {
-          "type": "faq",
-          "settings": {
-            "question": "Do you have a question?",
-            "answer": "<p>I have an answer<\/p>"
-          }
-        },
-        "a903f7ad-28cc-4025-a433-2c668f1ac570": {
-          "type": "faq",
-          "settings": {
-            "question": "Do you have a question?",
-            "answer": "<p>I have an answer<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "f1aecf11-ae91-44a7-adbc-db2d7379bc37",
-        "6d0c7add-36b7-4774-bcf8-6432d43b1322",
-        "2c3760a6-b847-4e47-baa8-56bd5b62a561",
-        "0eae0a36-9188-413c-829c-eb1425f85428",
-        "a903f7ad-28cc-4025-a433-2c668f1ac570"
-      ],
-      "custom_css": [
-        "h1 {margin-bottom: 60px;}",
-        ".container {margin-top: 60px; margin-bottom: 60px;}"
-      ],
       "settings": {
-        "faq_title": "Frequently Asked Questions"
       }
     }
   },
   "order": [
-    "3164fe86-637f-4b70-b222-a0fab4af65b3",
     "main"
   ]
 }

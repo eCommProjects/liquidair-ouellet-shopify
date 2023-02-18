@@ -162,38 +162,30 @@
           "footer-1": {
             "type": "menu",
             "settings": {
-              "title": "Product categories",
-              "menu": "footer-popular-categories"
+              "title": "Main menu",
+              "menu": "main-menu"
             }
           },
           "footer-2": {
             "type": "menu",
             "settings": {
-              "title": "USEFUL LINKS",
+              "title": "About",
               "menu": "footer"
-            }
-          },
-          "93ab6942-cb72-48f9-aa50-86d9243d7da3": {
-            "type": "text",
-            "settings": {
-              "title": "Business Information",
-              "image_width": 340,
-              "text": "<p>Distribution Liquidair Inc.<\/p><p>4442 Chem. Royal, Saint-Jean-de-l'Île-d'Orléans, QC, G0A 3W0<\/p>"
             }
           },
           "footer-3": {
             "type": "text",
+            "disabled": true,
             "settings": {
-              "title": "Pay Securely",
+              "title": "Optional title",
               "image_width": 340,
-              "text": "<p>We take your security and privacy very seriously. We do not keep or store Credit\/Debit card details once they have been processed.<\/p>"
+              "text": "<p>Share information such as the store's physical address, contact details, opening hours, etc.<\/p>"
             }
           }
         },
         "block_order": [
           "footer-1",
           "footer-2",
-          "93ab6942-cb72-48f9-aa50-86d9243d7da3",
           "footer-3"
         ],
         "settings": {
