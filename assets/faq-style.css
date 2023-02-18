@@ -1,0 +1,49 @@
+.wp-block-code{border:0;padding:0}.wp-block-code>div{overflow:auto}.shcb-language{border:0;clip:rect(1px,1px,1px,1px);-webkit-clip-path:inset(50%);clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal;word-break:normal}.hljs{box-sizing:border-box}.hljs.shcb-code-table{display:table;width:100%}.hljs.shcb-code-table>.shcb-loc{color:inherit;display:table-row;width:100%}.hljs.shcb-code-table .shcb-loc>span{display:table-cell}.wp-block-code code.hljs:not(.shcb-wrap-lines){white-space:pre}.wp-block-code code.hljs.shcb-wrap-lines{white-space:pre-wrap}.hljs.shcb-line-numbers{border-spacing:0;counter-reset:line}.hljs.shcb-line-numbers>.shcb-loc{counter-increment:line}.hljs.shcb-line-numbers .shcb-loc>span{padding-left:.75em}.hljs.shcb-line-numbers .shcb-loc:before{border-right:1px solid #ddd;content:counter(line);display:table-cell;padding:0 .75em;text-align:right;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;white-space:nowrap;width:1%}
+.faq-description {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.faq-checkbox {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.tabs {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 0px 12px #4141416e;
+}
+
+.tab {
+  width: 100%;
+  color: white;
+  overflow: hidden;
+}
+
+.tab-label {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  font-weight: bold;
+  color: white;
+}
+
+.tab-content {
+  max-height: 0;
+  padding: 0 1em;
+  background-color: white;
+  transition: all 0.5s ease;
+  color: black;
+}
+
+.tab-content p {
+  margin: 0;
+}
+
+.faq-checkbox:checked ~ .tab-content {
+  max-height: 100vh;
+  padding: 1em;
+}
