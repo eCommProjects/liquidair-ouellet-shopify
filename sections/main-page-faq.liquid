@@ -17,6 +17,11 @@
 </div>
 
 <div class="container container-narrow">
+  <div class="block-section">
+    <h1 class="page-title">
+      {{ page.title | escape }}
+    </h1>
+  </div>
   <div class="faq-container">
     <div class="tabs">
       {% for block in section.blocks %}
