@@ -1,12 +1,101 @@
 {
   "sections": {
+    "ffaca1a7-8be2-411c-8583-c81a26de4adc": {
+      "type": "rich-text",
+      "blocks": {
+        "template--18061038813488__ffaca1a7-8be2-411c-8583-c81a26de4adc-1676744060bbee1bb3-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "FAQ"
+          }
+        }
+      },
+      "block_order": [
+        "template--18061038813488__ffaca1a7-8be2-411c-8583-c81a26de4adc-1676744060bbee1bb3-0"
+      ],
+      "custom_css": [
+        "h2 {text-align: left; font-size: calc(var(--font-heading-scale) * 2.6rem);}"
+      ],
+      "settings": {
+        "narrow": true,
+        "overlay_background": "",
+        "color_scheme": "background-1",
+        "spacing_top": 60,
+        "spacing_bottom": 60
+      }
+    },
     "main": {
       "type": "main-page-faq",
+      "blocks": {
+        "a20c1dd5-c192-4d04-b903-9d84b4dd0289": {
+          "type": "faq",
+          "settings": {
+            "question": "Do you have a question?",
+            "answer": "<p>I have an answer<\/p>"
+          }
+        },
+        "8365f53a-e885-499e-9316-351911b1c089": {
+          "type": "faq",
+          "settings": {
+            "question": "Do you have a question?",
+            "answer": "<p>I have an answer<\/p>"
+          }
+        },
+        "aab9dae0-9588-4ba8-865a-fce1eac1545a": {
+          "type": "faq",
+          "settings": {
+            "question": "Do you have a question?",
+            "answer": "<p>I have an answer<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "a20c1dd5-c192-4d04-b903-9d84b4dd0289",
+        "8365f53a-e885-499e-9316-351911b1c089",
+        "aab9dae0-9588-4ba8-865a-fce1eac1545a"
+      ],
       "settings": {
+        "faq_title": "Products"
+      }
+    },
+    "e637aac7-6212-4725-ac27-f39cd1dd957d": {
+      "type": "main-page-faq",
+      "blocks": {
+        "f1949f23-42af-462b-bf08-e65adf5ffd05": {
+          "type": "faq",
+          "settings": {
+            "question": "Do you have a question?",
+            "answer": "<p>I have an answer<\/p>"
+          }
+        },
+        "6dcf20da-73f8-4c32-868b-71e41c5ee4a9": {
+          "type": "faq",
+          "settings": {
+            "question": "Do you have a question?",
+            "answer": "<p>I have an answer<\/p>"
+          }
+        },
+        "bfaa5c87-a6d2-454f-8198-9d7de6c5ce8b": {
+          "type": "faq",
+          "settings": {
+            "question": "Do you have a question?",
+            "answer": "<p>I have an answer<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "f1949f23-42af-462b-bf08-e65adf5ffd05",
+        "6dcf20da-73f8-4c32-868b-71e41c5ee4a9",
+        "bfaa5c87-a6d2-454f-8198-9d7de6c5ce8b"
+      ],
+      "settings": {
+        "faq_title": "Warranty"
       }
     }
   },
   "order": [
-    "main"
+    "ffaca1a7-8be2-411c-8583-c81a26de4adc",
+    "main",
+    "e637aac7-6212-4725-ac27-f39cd1dd957d"
   ]
 }
