@@ -1,1 +1,48 @@
-test123
+{% assign expand_questions = section.settings.expand_questions %}
+<section
+  class="faq-section--block"
+  id="tab3-content"
+  role="tabpanel"
+  aria-labelledby="tab3"
+  tabindex="0">
+  <h2 class="h1 faq-section--block-header">
+    <ly-as-85449>Produits</ly-as-85449>
+  </h2>
+  <div data-tab-component>
+    <div role="tablist" aria-label="Tabbed sections">
+      {% for block in section.blocks %}
+        <div class="faqAccordion-wrapper">
+          <dl
+            class="faqAccordion"
+            itemscope
+            itemprop="mainEntity"
+            itemtype="https://schema.org/Question">
+            <dt
+              role="tab"
+              aria-controls="faq{{ block.id }}-content"
+              id="faq{{ block.id }}">
+
+              <h3 itemprop="name" class="accordion_heading faq-list">
+                {{ block.settings.title }}
+              </h3>
+            </dt>
+            <dd
+              itemscope
+              itemprop="acceptedAnswer"
+              itemtype="https://schema.org/Answer"
+              class="faq-answer"
+              role="tabpanel"
+              id="faq{{ block.id }}-content"
+              aria-labelledby="faq{{ block.id }}"
+              tabindex="0"
+              aria-hidden="true">
+              <div itemprop="text">
+                {{ block.settings.answer }}
+              </div>
+            </dd>
+          </dl>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
