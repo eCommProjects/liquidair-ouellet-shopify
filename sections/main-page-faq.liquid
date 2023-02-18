@@ -17,8 +17,12 @@
             type="checkbox"
             id="faq_checkbox_{{ forloop.index }}"
             class="faq-checkbox">
-          <label for="faq_checkbox_{{ forloop.index }}" class="tab-label button button--primary">{{ item.question }}</label>
-          <div class="tab-content">{{ item.answer }}</div>
+          <label for="faq_checkbox_{{ forloop.index }}" class="tab-label button button--primary">
+            {{ item.question }}
+          </label>
+          <div class="tab-content">
+            {{ item.answer }}
+          </div>
         </div>
       {% endfor %}
     </div>
