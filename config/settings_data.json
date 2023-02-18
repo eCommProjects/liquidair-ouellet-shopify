@@ -159,12 +159,12 @@
       "footer": {
         "type": "footer",
         "blocks": {
-          "footer-3": {
+          "93ab6942-cb72-48f9-aa50-86d9243d7da3": {
             "type": "text",
             "settings": {
-              "title": "Pay Securely",
+              "title": "Store Information",
               "image_width": 340,
-              "text": "<p>We take your security and privacy very seriously. We do not keep or store Credit\/Debit card details once they have been processed.<\/p>"
+              "text": "<p>Distribution Liquidair Inc.<\/p><p>4442 Chem. Royal, Saint-Jean-de-l'Île-d'Orléans, QC, G0A 3W0<\/p>"
             }
           },
           "footer-1": {
@@ -180,12 +180,21 @@
               "title": "About",
               "menu": "footer"
             }
+          },
+          "footer-3": {
+            "type": "text",
+            "settings": {
+              "title": "Pay Securely",
+              "image_width": 340,
+              "text": "<p>We take your security and privacy very seriously. We do not keep or store Credit\/Debit card details once they have been processed.<\/p>"
+            }
           }
         },
         "block_order": [
-          "footer-3",
+          "93ab6942-cb72-48f9-aa50-86d9243d7da3",
           "footer-1",
-          "footer-2"
+          "footer-2",
+          "footer-3"
         ],
         "settings": {
           "payment_enable": true,
