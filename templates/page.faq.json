@@ -2,6 +2,9 @@
   "sections": {
     "2d75b566-4c6d-4926-a761-7d145185c5da": {
       "type": "custom-liquid",
+      "custom_css": [
+        "h1 {padding: 60px 0 60px 0;}"
+      ],
       "settings": {
         "title": "",
         "full_width": false,
