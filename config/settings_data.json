@@ -162,7 +162,7 @@
           "footer-1": {
             "type": "menu",
             "settings": {
-              "title": "Main menu",
+              "title": "Product categories",
               "menu": "main-menu"
             }
           },
