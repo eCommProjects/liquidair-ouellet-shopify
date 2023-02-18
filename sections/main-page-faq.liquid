@@ -5,23 +5,30 @@
   onload="this.media='all'">
 
 <div class="container container-narrow">
-  <h2 class="main-page-title page-title h0">
-    {{ section.settings.faq_title | escape }}
-  </h2>
-  <div class="faq-container">
-    <div class="tabs">
-      {% for block in section.blocks %}
-        {% assign item = block.settings %}
+  <div class="block-section">
+    <h1 class="page-title">
+      {{ page.title | escape }}
+    </h1>
+  </div>
+  <div class="block-section">
+    <h2 class="main-page-title page-title h0">
+      {{ section.settings.faq_title | escape }}
+    </h2>
+    <div class="faq-container">
+      <div class="tabs">
+        {% for block in section.blocks %}
+          {% assign item = block.settings %}
 
-        <div class="tab">
-          <input
-            type="checkbox"
-            id="faq_checkbox_{{ forloop.index }}"
-            class="faq-checkbox">
-          <label for="faq_checkbox_{{ forloop.index }}" class="tab-label button button--primary">{{ item.question }}</label>
-          <div class="tab-content">{{ item.answer }}</div>
-        </div>
-      {% endfor %}
+          <div class="tab">
+            <input
+              type="checkbox"
+              id="faq_checkbox_{{ forloop.index }}"
+              class="faq-checkbox">
+            <label for="faq_checkbox_{{ forloop.index }}" class="tab-label button button--primary">{{ item.question }}</label>
+            <div class="tab-content">{{ item.answer }}</div>
+          </div>
+        {% endfor %}
+      </div>
     </div>
   </div>
 </div>
