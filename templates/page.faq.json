@@ -2,7 +2,55 @@
   "sections": {
     "main": {
       "type": "main-page-faq",
+      "blocks": {
+        "96341d74-8a59-45ba-9daa-941acae87f68": {
+          "type": "faq",
+          "settings": {
+            "question": "Do you have a question?",
+            "answer": "<p>I have an answer<\/p>"
+          }
+        },
+        "a80a26ca-7335-4f35-b05a-c44bd6b5d567": {
+          "type": "faq",
+          "settings": {
+            "question": "Do you have a question?",
+            "answer": "<p>I have an answer<\/p>"
+          }
+        },
+        "cc476107-5c39-480e-9c70-6a13ac5ea5a5": {
+          "type": "faq",
+          "settings": {
+            "question": "Do you have a question?",
+            "answer": "<p>I have an answer<\/p>"
+          }
+        },
+        "70282376-c12d-45cf-89af-5520f59a46ca": {
+          "type": "faq",
+          "settings": {
+            "question": "Do you have a question?",
+            "answer": "<p>I have an answer<\/p>"
+          }
+        },
+        "56e32d48-834b-4339-b184-826b4f2e7d1c": {
+          "type": "faq",
+          "settings": {
+            "question": "Do you have a question?",
+            "answer": "<p>I have an answer<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "96341d74-8a59-45ba-9daa-941acae87f68",
+        "a80a26ca-7335-4f35-b05a-c44bd6b5d567",
+        "cc476107-5c39-480e-9c70-6a13ac5ea5a5",
+        "70282376-c12d-45cf-89af-5520f59a46ca",
+        "56e32d48-834b-4339-b184-826b4f2e7d1c"
+      ],
+      "custom_css": [
+        "h1 {margin-top:60px; margin-bottom:60px;}"
+      ],
       "settings": {
+        "faq_title": "Frequently Asked Questions"
       }
     }
   },
