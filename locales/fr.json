@@ -163,11 +163,11 @@
     "contact": {
       "form": {
         "name": "Prénom",
-        "about_dropdown":"De quel sujet s'agit-il?",
-        "about_returns":"Retours",
-        "about_shipping":"Expédition",
-        "about_customorder":"Commande sur mesure",
-        "about_other":"Autre",
+        "about_dropdown": "De quel sujet s'agit-il?",
+        "about_returns": "Retours",
+        "about_shipping": "Expédition",
+        "about_customorder": "Commande sur mesure",
+        "about_other": "Autre",
         "email": "Adresse e-mail",
         "phone": "Numéro de téléphone",
         "company": "Enterprise",

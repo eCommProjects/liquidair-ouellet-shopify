@@ -163,11 +163,11 @@
     "contact": {
       "form": {
         "name": "Name",
-        "about_dropdown":"What is this about?",
-        "about_returns":"Returns",
-        "about_shipping":"Shipping",
-        "about_customorder":"Custom Order",
-        "about_other":"Other",
+        "about_dropdown": "What is this about?",
+        "about_returns": "Returns",
+        "about_shipping": "Shipping",
+        "about_customorder": "Custom Order",
+        "about_other": "Other",
         "email": "Email",
         "phone": "Phone number",
         "comment": "Comment",

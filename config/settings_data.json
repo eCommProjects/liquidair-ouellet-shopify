@@ -101,7 +101,7 @@
             "settings": {
               "icon": "percent",
               "title": "Corporate Deals",
-              "text": "<p>Need multiple units for your project? <a href=\"\/pages\/corporate-deals\" title=\"Corporate Deals\">Contact us<\/a> to discuss business pricing (B2B).<\/p>"
+              "text": "<p>Need multiple units for your project? <a href=\"\/pages\/corporate-deals\" title=\"Corporate Deals\">Fill out this form<\/a> to discuss business pricing (B2B).<\/p>"
             }
           },
           "footer-features-0": {
@@ -109,7 +109,7 @@
             "settings": {
               "icon": "label",
               "title": "Lowest Prices",
-              "text": "<p>Save 50% or more off retail! Found a lower price tag elsewhere? Contact us and we will match it.<\/p>"
+              "text": "<p>Save 50% or more off retail! Found a lower price tag elsewhere? <a href=\"\/pages\/contact\" title=\"Contact Us\">Contact us<\/a> and we will match it.<\/p>"
             }
           },
           "footer-features-1": {
