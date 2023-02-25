@@ -163,9 +163,16 @@
     "contact": {
       "form": {
         "name": "Name",
+        "about_dropdown":"What is this about?",
+        "about_returns":"Returns",
+        "about_shipping":"Shipping",
+        "about_customorder":"Custom Order",
+        "about_other":"Other",
         "email": "Email",
         "phone": "Phone number",
         "comment": "Comment",
+        "comment2": "Tell us about your project",
+        "company": "Company",
         "send": "Send",
         "post_success": "Thanks for contacting us. We'll get back to you as soon as possible."
       }

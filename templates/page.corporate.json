@@ -6,8 +6,9 @@
       }
     },
     "form": {
-      "type": "contact-form",
+      "type": "contact-form-b2b",
       "settings": {
+        "title": ""
       }
     }
   },

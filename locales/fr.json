@@ -163,10 +163,17 @@
     "contact": {
       "form": {
         "name": "Prénom",
+        "about_dropdown":"De quel sujet s'agit-il?",
+        "about_returns":"Retours",
+        "about_shipping":"Expédition",
+        "about_customorder":"Commande sur mesure",
+        "about_other":"Autre",
         "email": "Adresse e-mail",
         "phone": "Numéro de téléphone",
+        "company": "Enterprise",
         "comment": "Commentaire",
-        "send": "Envoi",
+        "comment2": "Parlez-nous de votre projet",
+        "send": "Soumettre",
         "post_success": "Merci de nous contacter. Nous vous répondrons dès que possible."
       }
     },
