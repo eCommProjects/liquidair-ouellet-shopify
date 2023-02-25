@@ -50,7 +50,7 @@
       "announcement-bar": {
         "type": "announcement-bar",
         "settings": {
-          "text": "SAVE 50% OFF RETAIL PRICE + *FREE SHIPPING!",
+          "text": "SAVE UP TO 50% OFF RETAIL PRICE + *FREE SHIPPING!",
           "link": "shopify:\/\/collections\/all",
           "menu": "",
           "color_scheme": "accent-3",
