@@ -27,8 +27,8 @@
         "70282376-c12d-45cf-89af-5520f59a46ca": {
           "type": "faq",
           "settings": {
-            "question": "Do you have a question?",
-            "answer": "<p>I have an answer<\/p>"
+            "question": "4. What payment methods do you accept?",
+            "answer": "<ul><li>We accept all major credit cards, PayPal, Apple Pay, Google Pay, bank transfers, and cash on delivery. <\/li><li>If you have a special agreement, want to pay by bank transfer, or cash-on-delivery, <a href=\"\/pages\/corporate-deals\" title=\"Corporate Deals\">fill this form to get in touch with us<\/a>.<\/li><\/ul>"
           }
         },
         "56e32d48-834b-4339-b184-826b4f2e7d1c": {
