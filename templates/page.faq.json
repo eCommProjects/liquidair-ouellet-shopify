@@ -14,7 +14,7 @@
           "type": "faq",
           "settings": {
             "question": "2. How can I track my order?",
-            "answer": "<ul><li>Answer: You can track your order by entering your order number on the \"Track Your Order\" page. <\/li><li>You will receive an email with your tracking information once your order has been shipped. <\/li><li>If you have any questions about the status of your order, feel free to contact our customer service team.<\/li><\/ul>"
+            "answer": "<ul><li>Once your order is shipped, you will receive an email with your tracking information.<\/li><li>Use this code on the corresponding transporter's website to see your order status.<\/li><li>If you have any questions about the status of your order, feel free to <a href=\"\/pages\/contact\" title=\"Contact Us\">contact our customer service team<\/a>.<\/li><\/ul>"
           }
         },
         "cc476107-5c39-480e-9c70-6a13ac5ea5a5": {
