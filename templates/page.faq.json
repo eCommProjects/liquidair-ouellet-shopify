@@ -34,8 +34,8 @@
         "56e32d48-834b-4339-b184-826b4f2e7d1c": {
           "type": "faq",
           "settings": {
-            "question": "Do you have a question?",
-            "answer": "<p>I have an answer<\/p>"
+            "question": "5. Can I cancel my order?",
+            "answer": "<ul><li>If your order has not been shipped, you can cancel your order by <a href=\"\/pages\/contact\" title=\"Contact Us\">contacting our customer service team<\/a>. <\/li><li>However, if your order has already been shipped, you will need to return the item following our return policy. <\/li><li>If you paid via bank transfer or cash on delivery, we will issue a refund to your bank account or provide a refund in cash upon receiving the returned item.<\/li><\/ul>"
           }
         }
       },
