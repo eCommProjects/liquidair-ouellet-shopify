@@ -15,7 +15,7 @@
             "button_label": "Shop All Products",
             "button_type_link": false,
             "button_color_scheme": "accent-1",
-            "link": "shopify:\/\/collections",
+            "link": "shopify:\/\/collections\/all",
             "box_align": "bottom-left",
             "content_width": 60,
             "mobile_image": "shopify:\/\/shop_images\/Finale_Ads_DimplexDIR_1.png",
