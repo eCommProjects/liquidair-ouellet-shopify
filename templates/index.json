@@ -1,5 +1,63 @@
 {
   "sections": {
+    "5dc7dfdb-e3ae-4c25-9cf6-16a503ddcbd6": {
+      "type": "slideshow",
+      "blocks": {
+        "template--17312061718832__5dc7dfdb-e3ae-4c25-9cf6-16a503ddcbd6-1678927505fc686a5c-0": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SLIDER_FINAL.png",
+            "overlay_background": "",
+            "heading": "",
+            "heading_size": "md",
+            "subheading": "",
+            "text_color": "#ffffff",
+            "button_label": "Shop All Products",
+            "button_type_link": false,
+            "button_color_scheme": "accent-1",
+            "link": "",
+            "box_align": "bottom-left",
+            "content_width": 60,
+            "mobile_image": "shopify:\/\/shop_images\/Finale_Ads_DimplexDIR_1.png",
+            "mobile_heading_size": "md",
+            "mobile_box_align": "bottom-center"
+          }
+        },
+        "template--17312061718832__5dc7dfdb-e3ae-4c25-9cf6-16a503ddcbd6-1678927505fc686a5c-1": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "overlay_background": "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%)",
+            "heading": "Image slide",
+            "heading_size": "md",
+            "subheading": "<p>Tell your brand's story through images<\/p>",
+            "text_color": "#ffffff",
+            "button_label": "Button label",
+            "button_type_link": false,
+            "button_color_scheme": "button-primary",
+            "link": "",
+            "box_align": "bottom-left",
+            "content_width": 60,
+            "mobile_heading_size": "md",
+            "mobile_box_align": "bottom-left"
+          }
+        }
+      },
+      "block_order": [
+        "template--17312061718832__5dc7dfdb-e3ae-4c25-9cf6-16a503ddcbd6-1678927505fc686a5c-0",
+        "template--17312061718832__5dc7dfdb-e3ae-4c25-9cf6-16a503ddcbd6-1678927505fc686a5c-1"
+      ],
+      "settings": {
+        "full_width": false,
+        "slide_height": "adapt_image",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "accessibility_info": "",
+        "color_scheme": "background-1",
+        "spacing_top": 60,
+        "spacing_bottom": 60
+      }
+    },
     "collections-1": {
       "type": "collection-list",
       "blocks": {
@@ -310,6 +368,22 @@
             "mobile_heading_size": "md",
             "mobile_box_align": "bottom-left"
           }
+        },
+        "8996e990-d8b9-4c12-92c5-63f829f8e76a": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "thermostats",
+            "overlay_background": "linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8) 100%)",
+            "button_text": "",
+            "button_type_link": false,
+            "button_color_scheme": "button-primary",
+            "heading_size": "md",
+            "text_color": "#ffffff",
+            "box_align": "bottom-left",
+            "mobile_heading_size": "md",
+            "mobile_box_align": "bottom-left"
+          }
         }
       },
       "block_order": [
@@ -321,7 +395,8 @@
         "collection-0",
         "collection-2",
         "collection-4",
-        "collection-5"
+        "collection-5",
+        "8996e990-d8b9-4c12-92c5-63f829f8e76a"
       ],
       "settings": {
         "heading": "Popular categories",
@@ -417,6 +492,7 @@
     },
     "featured-collection-2": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "collection": "window-air-conditioners",
         "products_to_show": 3,
@@ -444,6 +520,7 @@
     }
   },
   "order": [
+    "5dc7dfdb-e3ae-4c25-9cf6-16a503ddcbd6",
     "collections-1",
     "featured-collection-1",
     "brands",
