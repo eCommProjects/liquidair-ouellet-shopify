@@ -48,8 +48,8 @@
         "template--17312061718832__5dc7dfdb-e3ae-4c25-9cf6-16a503ddcbd6-1678927505fc686a5c-1"
       ],
       "settings": {
-        "full_width": false,
-        "slide_height": "adapt_image",
+        "full_width": true,
+        "slide_height": "medium",
         "auto_rotate": false,
         "change_slides_speed": 5,
         "accessibility_info": "",
