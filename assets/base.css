@@ -2518,7 +2518,7 @@ div.shopify-policy__container {
 
   .content-align-desktop-middle-left {
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: center;
     text-align: left;
   }
 
