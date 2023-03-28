@@ -247,11 +247,9 @@ slideshow-component {
 }
 @media (min-width: 750px){
   .slideshow-buttons{
-    position: absolute;
-    left: 25%;
+    position: relative;
+    left: auto;
     bottom: 0px;
-    -webkit-transform: translateX(-25%);
-    transform: translateX(-75%)
   }
 }
 
