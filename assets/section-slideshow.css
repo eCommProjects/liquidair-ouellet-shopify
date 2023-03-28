@@ -253,6 +253,12 @@ slideshow-component {
     transform: translateX(-50%)
   }
 }
+@media (max-width: 990px){
+  .slideshow-buttons{
+  bottom: 0;
+  left: 7.5rem;
+  } 
+}
 
 .slideshow-buttons .button-text-link {
   color: currentColor;
