@@ -12,7 +12,7 @@
             "heading_size": "xl",
             "subheading": "<p>Climatisation et Chauffage<\/p><p><strong>RABAIS JUSQU'À 50%!<\/strong><\/p>",
             "text_color": "#ffffff",
-            "button_label": "Shop All Products",
+            "button_label": "Shop All",
             "button_type_link": false,
             "button_color_scheme": "accent-1",
             "link": "shopify:\/\/collections\/all",
