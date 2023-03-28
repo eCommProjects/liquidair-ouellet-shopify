@@ -8,9 +8,9 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/SLIDER_FINAL.png",
             "overlay_background": "",
-            "heading": "",
-            "heading_size": "md",
-            "subheading": "",
+            "heading": "Produits en liquidation",
+            "heading_size": "xl",
+            "subheading": "<p>Climatisation & Chauffage<\/p><p>Rabais jusqu'à 50%<\/p>",
             "text_color": "#ffffff",
             "button_label": "Shop All Products",
             "button_type_link": false,
@@ -49,7 +49,7 @@
       ],
       "settings": {
         "full_width": true,
-        "slide_height": "medium",
+        "slide_height": "adapt_image",
         "auto_rotate": false,
         "change_slides_speed": 5,
         "accessibility_info": "",
