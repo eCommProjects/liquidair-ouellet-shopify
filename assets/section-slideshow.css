@@ -178,6 +178,7 @@ slideshow-component {
 
 .slideshow-heading {
   margin-bottom: 1rem;
+  text-align: center;
   color: currentColor;
 }
 
