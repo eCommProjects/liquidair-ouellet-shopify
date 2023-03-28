@@ -238,13 +238,18 @@ slideshow-component {
   text-decoration-thickness: 0.2rem;
 }
 
+@media (max-width: 750px){
+  .slideshow-buttons{
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%)
+  }
+}
+
 .slideshow-buttons .button-text-link {
   color: currentColor;
-  position: absolute;
-  left: 50%;
-  bottom: 0px;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%)
 }
 
 slideshow-navigation {
