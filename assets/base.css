@@ -2469,7 +2469,7 @@ div.shopify-policy__container {
 
 .content-align-middle-center {
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   text-align: center;
 }
 
