@@ -238,20 +238,13 @@ slideshow-component {
   text-decoration-thickness: 0.2rem;
 }
 
-.slideshow-buttons{
-  position: absolute;
-  left: 50%;
-  bottom: 0px;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%)
-}
-@media (min-width: 750px){
+@media (max-width: 749px){
   .slideshow-buttons{
     position: absolute;
-    left: 33%;
+    left: 50%;
     bottom: 0px;
-    -webkit-transform: translateX(-33%);
-    transform: translateX(-67%)
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%)
   }
 }
 
