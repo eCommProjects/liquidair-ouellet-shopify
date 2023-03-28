@@ -16,11 +16,11 @@
             "button_type_link": false,
             "button_color_scheme": "accent-1",
             "link": "shopify:\/\/collections\/all",
-            "box_align": "middle-left",
+            "box_align": "middle-center",
             "content_width": 50,
             "mobile_image": "shopify:\/\/shop_images\/Finale_Ads_DimplexDIR_1.png",
             "mobile_heading_size": "xl",
-            "mobile_box_align": "top-center"
+            "mobile_box_align": "middle-center"
           }
         },
         "template--17312061718832__5dc7dfdb-e3ae-4c25-9cf6-16a503ddcbd6-1678927505fc686a5c-1": {
