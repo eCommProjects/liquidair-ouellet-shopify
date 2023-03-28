@@ -255,7 +255,6 @@ slideshow-component {
 }
 @media (max-width: 990px){
   .slideshow-buttons{
-  bottom: 0;
   left: 7.5rem;
   } 
 }
