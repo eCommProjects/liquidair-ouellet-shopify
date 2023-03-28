@@ -216,7 +216,7 @@ slideshow-component {
   }
 
   .slideshow-heading-desktop-xl {
-    font-size: calc(var(--font-heading-scale) * 3rem);
+    font-size: calc(var(--font-heading-scale) * 3.4rem);
   }
 }
 
