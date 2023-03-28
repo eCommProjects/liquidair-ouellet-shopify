@@ -163,8 +163,8 @@ slideshow-component {
 }
 
 .slideshow-content > :last-child {
-  margin-bottom: 50px;
-  margin-top: auto;
+  margin-bottom: 2.5rem;
+  margin-top: 10rem;
 }
 
 .block-section-fullwidth .slideshow-content-container {
