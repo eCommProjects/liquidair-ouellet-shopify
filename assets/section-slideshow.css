@@ -244,31 +244,6 @@ slideshow-component {
   }
 }
 
-@media (max-width: 749px){
-  .slideshow-buttons{
-    position: absolute;
-    left: 50%;
-    bottom: 0px;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%)
-  }
-}
-@media (min-width: 750px){
-  .slideshow-buttons{
-    position: absolute;
-    left: 7.5rem;
-    bottom: 0;
-  } 
-  @media (min-width: 990px){
-    .slideshow-buttons{
-      left: 12.5rem;
-    } 
-  @media (min-width: 1200px){
-    .slideshow-buttons{
-      left: 17.5rem;
-    } 
-}
-
 .slideshow-buttons .button-text-link {
   color: currentColor;
 }
