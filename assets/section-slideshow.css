@@ -263,6 +263,10 @@ slideshow-component {
     .slideshow-buttons{
       left: 12.5rem;
     } 
+  @media (min-width: 1200px){
+    .slideshow-buttons{
+      left: 17.5rem;
+    } 
 }
 
 .slideshow-buttons .button-text-link {
