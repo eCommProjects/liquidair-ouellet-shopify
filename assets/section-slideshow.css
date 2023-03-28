@@ -167,6 +167,10 @@ slideshow-component {
   margin-top: 10rem;
 }
 
+.slideshow-content > :first-child {
+  margin-top: 2.5rem;
+}
+
 .block-section-fullwidth .slideshow-content-container {
   padding-left: 0;
   padding-right: 0;
