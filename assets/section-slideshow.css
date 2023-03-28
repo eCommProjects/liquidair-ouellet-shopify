@@ -154,6 +154,9 @@ slideshow-component {
   .slideshow-content-container {
     padding: 2.5rem;
   }
+  .slideshow-content > :last-child {
+    margin-top: 10rem;
+  }
 }
 
 @media (min-width: 1200px) {
