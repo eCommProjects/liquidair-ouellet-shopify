@@ -221,7 +221,7 @@ slideshow-component {
 }
 
 .slideshow-text {
-  font-size: calc(var(--font-body-scale) * 2.4rem);
+  font-size: calc(var(--font-body-scale) * 3rem);
   line-height: 1.2;
   margin-bottom: 2.5rem;
 }
