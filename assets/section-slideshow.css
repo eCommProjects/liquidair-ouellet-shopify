@@ -240,6 +240,11 @@ slideshow-component {
 
 .slideshow-buttons .button-text-link {
   color: currentColor;
+  position: absolute;
+  left: 50%;
+  bottom: 0px;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%)
 }
 
 slideshow-navigation {
