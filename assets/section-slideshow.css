@@ -238,7 +238,7 @@ slideshow-component {
   text-decoration-thickness: 0.2rem;
 }
 
-@media (max-width: 750px){
+@media (max-width: 749px){
   .slideshow-buttons{
     position: absolute;
     left: 50%;
