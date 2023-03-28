@@ -238,7 +238,7 @@ slideshow-component {
   text-decoration-thickness: 0.2rem;
 }
 
-@media (max-width: 338px){
+@media (max-width: 336px){
   .slideshow-buttons{
     display: none;
   }
