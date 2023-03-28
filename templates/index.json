@@ -17,7 +17,7 @@
             "button_color_scheme": "accent-1",
             "link": "shopify:\/\/collections\/all",
             "box_align": "bottom-left",
-            "content_width": 30,
+            "content_width": 50,
             "mobile_image": "shopify:\/\/shop_images\/Finale_Ads_DimplexDIR_1.png",
             "mobile_heading_size": "md",
             "mobile_box_align": "bottom-center"
@@ -54,7 +54,7 @@
         "change_slides_speed": 5,
         "accessibility_info": "",
         "color_scheme": "background-1",
-        "spacing_top": 0,
+        "spacing_top": 40,
         "spacing_bottom": 60
       }
     },
