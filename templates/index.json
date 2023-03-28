@@ -8,9 +8,9 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/SLIDER_FINAL.png",
             "overlay_background": "",
-            "heading": "Produits en liquidation",
+            "heading": "",
             "heading_size": "xl",
-            "subheading": "<p>Climatisation & Chauffage<\/p><p>Rabais jusqu'à 50%<\/p>",
+            "subheading": "",
             "text_color": "#ffffff",
             "button_label": "Shop All Products",
             "button_type_link": false,
