@@ -163,7 +163,7 @@ slideshow-component {
 }
 
 .slideshow-content > :last-child {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   margin-top: 10rem;
 }
 
