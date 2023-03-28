@@ -164,7 +164,7 @@ slideshow-component {
 
 .slideshow-content > :last-child {
   margin-bottom: 50px;
-  margin-top: 10rem;
+  margin-top: auto;
 }
 
 .block-section-fullwidth .slideshow-content-container {
