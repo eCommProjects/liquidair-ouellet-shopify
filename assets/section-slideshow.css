@@ -130,6 +130,11 @@ slideshow-component {
   }
 }
 
+@media (max-width: 749px) {
+  .slideshow-text {
+    display: none;
+  }
+
 .slideshow-content-wrap {
   position: absolute;
   width: 100%;
