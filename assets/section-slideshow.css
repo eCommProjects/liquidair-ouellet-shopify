@@ -253,6 +253,13 @@ slideshow-component {
     transform: translateX(-50%)
   }
 }
+@media (max-width: 749px){
+  .slideshow-heading,
+  .slideshow-text {
+    display: none;  
+  }
+}
+
 .slideshow-buttons .button-text-link {
   color: currentColor;
 }
