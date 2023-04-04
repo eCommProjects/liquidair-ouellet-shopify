@@ -6,7 +6,7 @@
         "template--17312061718832__5dc7dfdb-e3ae-4c25-9cf6-16a503ddcbd6-1678927505fc686a5c-0": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/SLIDER_FINAL.png",
+            "image": "shopify:\/\/shop_images\/Slider.png",
             "overlay_background": "",
             "heading": "Produits en liquidation",
             "heading_size": "xl",
@@ -54,7 +54,7 @@
         "change_slides_speed": 5,
         "accessibility_info": "",
         "color_scheme": "background-1",
-        "spacing_top": 0,
+        "spacing_top": 20,
         "spacing_bottom": 60
       }
     },
