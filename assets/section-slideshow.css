@@ -131,6 +131,7 @@ slideshow-component {
 }
 
 @media (max-width: 749px) {
+  .slideshow-heading,
   .slideshow-text {
     display: none;
   }
