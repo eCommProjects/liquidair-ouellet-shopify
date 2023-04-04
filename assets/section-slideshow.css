@@ -181,18 +181,6 @@ slideshow-component {
   position: relative;
 }
 
-@media (max-width: 749px) {
-  .slideshow-heading,
-  .slideshow-text {
-    display: none;
-  }
-
-@media (min-width: 750px) {
-  .slideshow-heading,
-  .slideshow-text {
-    display: block;
-  }
-
 .slideshow-heading {
   margin-bottom: 1rem;
   color: currentColor;
