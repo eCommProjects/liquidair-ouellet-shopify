@@ -251,7 +251,11 @@ slideshow-component {
     bottom: 0px;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%)
-  }
+  };
+  .slideshow-heading,
+  .slideshow-text {
+    display: none;
+    
 }
 
 .slideshow-buttons .button-text-link {
