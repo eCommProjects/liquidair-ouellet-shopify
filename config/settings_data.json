@@ -54,7 +54,7 @@
       "announcement-bar": {
         "type": "announcement-bar",
         "settings": {
-          "text": "* FREE SHIPPING ON SALE ITEMS! *",
+          "text": "* SAVE UP TO 50% OFF RETAIL PRICE \/ FREE SHIPPING ON SALE ITEMS! *",
           "link": "shopify:\/\/collections\/on-sale",
           "menu": "",
           "color_scheme": "accent-3",
