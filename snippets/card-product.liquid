@@ -1,16 +1,16 @@
 {% comment %}
-Renders a product card.
+    Renders a product card.
 
-Accepts:
-- card_product: {Object} Product object
-- mobile_two_columns: {Boolean} Whether the card is displayed in two columns when on mobile. Default: false
-- show_vendor: {Boolean} Show the product vendor. Default: false
-- show_stock: {Boolean} Show the product stock. Default: false
-- show_rating: {Boolean} Show the product rating. Default: false
-- show_add_to_cart: {Boolean} Show the Add To Cart button. Default: false
+    Accepts:
+    - card_product: {Object} Product object
+    - mobile_two_columns: {Boolean} Whether the card is displayed in two columns when on mobile. Default: false
+    - show_vendor: {Boolean} Show the product vendor. Default: false
+    - show_stock: {Boolean} Show the product stock. Default: false
+    - show_rating: {Boolean} Show the product rating. Default: false
+    - show_add_to_cart: {Boolean} Show the Add To Cart button. Default: false
 
-Usage:
-{% render 'card-product' card_product: product %}
+    Usage:
+    {% render 'card-product' card_product: product %}
 {% endcomment %}
 
 {{ 'component-rating.css' | asset_url | stylesheet_tag }}
@@ -30,90 +30,80 @@ Usage:
 -%}
 
 {% if card_product and card_product != empty %}
-  <div class="card card-product {% if card_product.featured_media == nil %} card-no-media{% endif %} {{ class }}">
-    <figure class="card-media">
-      <a href="{{ card_product.url }}">
-        {% if card_product.featured_media %}
-          {% if ratio != 0 %}
-            <div class="aspect-ratio" style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;">
-            {% endif %}
-            <img
-              class="card-media-image"
-              srcset="{%- if card_product.featured_media.width >= 200 -%}
-              {{ card_product.featured_media | image_url: width: 200 }} 200w,{%- endif -%}
-            {%- if card_product.featured_media.width >= 420 -%}
-              {{ card_product.featured_media | image_url: width: 420 }} 420w,{%- endif -%}
-            {%- if card_product.featured_media.width >= 650 -%}
-              {{ card_product.featured_media | image_url: width: 650 }} 650w,{%- endif -%}
-            {%- if card_product.featured_media.width >= 750 -%}
-              {{ card_product.featured_media | image_url: width: 750 }} 750w,{%- endif -%}
-            {%- if card_product.featured_media.width >= 950 -%}
-              {{ card_product.featured_media | image_url: width: 950 }} 950w,{%- endif -%}
-            {{ card_product.featured_media | image_url }} {{ card_product.featured_media.width }}w"
-            {% if mobile_two_columns %}
-            sizes="(min-width: 1200px) 420px, (min-width: 750px) calc((100vw - 4rem - 3rem) / 3), calc((100vw - 3rem - 1rem) / 2)"
-            {% else %}
-            sizes="(min-width: 1200px) 420px, (min-width: 750px) calc((100vw - 4rem - 3rem) / 3), calc(100vw - 3rem - 1rem)"
-            {% endif %}
-            src="{{ card_product.featured_media | image_url: width: 650 }}"
-            alt="{{ card_product.featured_media.alt | escape }}"
-            width="{{ card_product.featured_media.width }}"
-            height="{{ card_product.featured_media.height }}"
-            loading="lazy">
+	<div class="card card-product {% if card_product.featured_media == nil %} card-no-media{% endif %} {{ class }}">
+		<figure class="card-media">
+			<a href="{{ card_product.url }}">
+				{% if card_product.featured_media %}
+					{% if ratio != 0 %}
+						<div class="aspect-ratio" style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;">
+					{% endif %}
+						<img
+							class="card-media-image"
+							srcset="{%- if card_product.featured_media.width >= 200 -%}{{ card_product.featured_media | image_url: width: 200 }} 200w,{%- endif -%}
+								{%- if card_product.featured_media.width >= 420 -%}{{ card_product.featured_media | image_url: width: 420 }} 420w,{%- endif -%}
+								{%- if card_product.featured_media.width >= 650 -%}{{ card_product.featured_media | image_url: width: 650 }} 650w,{%- endif -%}
+								{%- if card_product.featured_media.width >= 750 -%}{{ card_product.featured_media | image_url: width: 750 }} 750w,{%- endif -%}
+								{%- if card_product.featured_media.width >= 950 -%}{{ card_product.featured_media | image_url: width: 950 }} 950w,{%- endif -%}
+								{{ card_product.featured_media | image_url }} {{ card_product.featured_media.width }}w"
+							{% if mobile_two_columns %}
+								sizes="(min-width: 1200px) 420px, (min-width: 750px) calc((100vw - 4rem - 3rem) / 3), calc((100vw - 3rem - 1rem) / 2)"
+							{% else %}
+								sizes="(min-width: 1200px) 420px, (min-width: 750px) calc((100vw - 4rem - 3rem) / 3), calc(100vw - 3rem - 1rem)"
+							{% endif %}
+							src="{{ card_product.featured_media | image_url: width: 650 }}"
+							alt="{{ card_product.featured_media.alt | escape }}"
+							width="{{ card_product.featured_media.width }}"
+							height="{{ card_product.featured_media.height }}"
+							loading="lazy"
+						/>
 
-            {% assign second_image = card_product.images[1] %}
-            {%- if second_image != nil and settings.products_show_secondary_image -%}
-              <img
-                class="card-media-image"
-                srcset="{%- if second_image.width >= 200 -%}
-                {{ second_image | image_url: width: 200 }} 200w,{%- endif -%}
-              {%- if second_image.width >= 420 -%}
-                {{ second_image | image_url: width: 420 }} 420w,{%- endif -%}
-              {%- if second_image.width >= 650 -%}
-                {{ second_image | image_url: width: 650 }} 650w,{%- endif -%}
-              {%- if second_image.width >= 750 -%}
-                {{ second_image | image_url: width: 750 }} 750w,{%- endif -%}
-              {%- if second_image.width >= 950 -%}
-                {{ second_image | image_url: width: 950 }} 950w,{%- endif -%}
-              {{ second_image | image_url }} {{ second_image.width }}w"
-              {% if mobile_two_columns %}
-              sizes="(min-width: 1200px) 420px, (min-width: 750px) calc((100vw - 4rem - 3rem) / 3), calc((100vw - 3rem - 1rem) / 2)"
-              {% else %}
-              sizes="(min-width: 1200px) 420px, (min-width: 750px) calc((100vw - 4rem - 3rem) / 3), calc(100vw - 3rem - 1rem)"
-              {% endif %}
-              src="{{ second_image | image_url: width: 650 }}"
-              alt="{{ second_image.alt | escape }}"
-              width="{{ second_image.width }}"
-              height="{{ second_image.height }}"
-              loading="lazy">
-            {%- endif -%}
-            {% if ratio != 0 %}
-            </div>
-          {% endif %}
-        {% endif %}
-      </a>
+					{% assign second_image = card_product.images[1] %}
+					{%- if second_image != nil and settings.products_show_secondary_image -%}
+						<img
+							class="card-media-image"
+							srcset="{%- if second_image.width >= 200 -%}{{ second_image | image_url: width: 200 }} 200w,{%- endif -%}
+								{%- if second_image.width >= 420 -%}{{ second_image | image_url: width: 420 }} 420w,{%- endif -%}
+								{%- if second_image.width >= 650 -%}{{ second_image | image_url: width: 650 }} 650w,{%- endif -%}
+								{%- if second_image.width >= 750 -%}{{ second_image | image_url: width: 750 }} 750w,{%- endif -%}
+								{%- if second_image.width >= 950 -%}{{ second_image | image_url: width: 950 }} 950w,{%- endif -%}
+								{{ second_image | image_url }} {{ second_image.width }}w"
+							{% if mobile_two_columns %}
+								sizes="(min-width: 1200px) 420px, (min-width: 750px) calc((100vw - 4rem - 3rem) / 3), calc((100vw - 3rem - 1rem) / 2)"
+							{% else %}
+								sizes="(min-width: 1200px) 420px, (min-width: 750px) calc((100vw - 4rem - 3rem) / 3), calc(100vw - 3rem - 1rem)"
+							{% endif %}
+							src="{{ second_image | image_url: width: 650 }}"
+							alt="{{ second_image.alt | escape }}"
+							width="{{ second_image.width }}"
+							height="{{ second_image.height }}"
+							loading="lazy"
+						/>
+					{%- endif -%}
+					{% if ratio != 0 %}
+						</div>
+					{% endif %}
+				{% endif %}
+			</a>
 
-      {% unless settings.catalog_enabled %}
+			{% unless settings.catalog_enabled %}
+				{% if card_product.compare_at_price > card_product.price %}
+					<div class="card-badge top left">
+						<span class="badge badge-sale">
+							{% if settings.sale_badge_mode == 'percentage' %}
+								{% assign sale_percentage = card_product.compare_at_price | minus: card_product.price | times: 1.0 | divided_by: card_product.compare_at_price | times: 100 | round %}
+								-{{ sale_percentage }}%
+							{% else %}
+								{{ 'products.product.on_sale' | t }}
+							{% endif %}
+						</span>
+					</div>
+				{% endif %}
+			{% endunless %}
+		</figure>
 
-        {% if card_product.compare_at_price > card_product.price %}
-          <div
-            class="card-badge top left">
-            <span class="badge badge-sale">
-              {% if settings.sale_badge_mode == 'percentage' %}
-                {% assign sale_percentage = card_product.compare_at_price | minus: card_product.price | times: 1.0 | divided_by: card_product.compare_at_price | times: 100 | round %}
-                -{{ sale_percentage }}%
-              {% else %}
-                {{ 'products.product.on_sale' | t }}
-              {% endif %}
-            </span>
-          </div>
-        {% endif %}
-      {% endunless %}
-    </figure>
-
-    <div class="card-info">
-      {% if show_vendor and card_product.vendor != blank %}
-        {% liquid
+		<div class="card-info">
+			{% if show_vendor and card_product.vendor != blank %}
+				{% liquid
 					assign matching_collection = false
 					assign vendor_handle = card_product.vendor | handleize
 					for collection in card_product.collections
@@ -122,74 +112,72 @@ Usage:
 						endif
 					endfor
 				%}
-        <div class="card-eyebrow">
-          {% if matching_collection %}
-            <a href="{{ routes.collections_url }}/{{ vendor_handle }}">{{ card_product.vendor }}</a>
-          {% else %}
-            {{ card_product.vendor | link_to_vendor }}
-          {% endif %}
-        </div>
-      {% endif %}
+				<div class="card-eyebrow">
+					{% if matching_collection %}
+						<a href="{{ routes.collections_url }}/{{ vendor_handle }}">{{ card_product.vendor }}</a>
+					{% else %}
+						{{ card_product.vendor | link_to_vendor }}
+					{% endif %}
+				</div>
+			{% endif %}
 
-      <h3 class="card-heading typography-{{ settings.product_title_font }}">
-        <a href="{{ card_product.url }}">
-          {{ card_product.title | escape }}</a>
-      </h3>
-    </div>
+			<h3 class="card-heading typography-{{ settings.product_title_font }}">
+				<a href="{{ card_product.url }}"> {{ card_product.title | escape }}</a>
+			</h3>
+		</div>
 
-    {% unless settings.catalog_enabled %}
-      <div class="card-footer">
-        <div class="card-footer-intro">
-          {%- if show_stock -%}
-            {% render 'product-availability-listing', product: card_product %}
-          {% endif %}
+		{% unless settings.catalog_enabled %}
+			<div class="card-footer">
+				<div class="card-footer-intro">
+					{%- if show_stock -%}
+						{% render 'product-availability-listing', product: card_product %}
+					{% endif %}
 
-          {%- if show_rating -%}
-            {% render 'rating', product: card_product %}
-          {% endif %}
-        </div>
+					{%- if show_rating -%}
+						{% render 'rating', product: card_product %}
+					{% endif %}
+				</div>
 
-        {% render 'price', product: card_product, discount_badge: false %}
+				{% render 'price', product: card_product, discount_badge: false %}
 
-        {%- if show_add_to_cart -%}
-          {% render 'card-product-add-to-cart', product: card_product %}
-        {%- endif -%}
-      </div>
-    {% endunless %}
-  </div>
+				{%- if show_add_to_cart -%}
+					{% render 'card-product-add-to-cart', product: card_product %}
+				{%- endif -%}
+			</div>
+		{% endunless %}
+	</div>
 {% else %}
-  <div class="card card-product {{ class }}">
-    <figure class="card-media">
-      <a role="link" aria-disabled="true">
-        {{ 'product-1' | strip | placeholder_svg_tag }}
-      </a>
-    </figure>
+	<div class="card card-product {{ class }}">
+		<figure class="card-media">
+			<a role="link" aria-disabled="true">
+				{{ 'product-1' | strip | placeholder_svg_tag }}
+			</a>
+		</figure>
 
-    <div class="card-info">
-      {% if show_vendor and card_product.vendor != blank %}
-        <div class="card-eyebrow">{{ 'products.product.vendor' | t }}</div>
-      {% endif %}
+		<div class="card-info">
+			{% if show_vendor and card_product.vendor != blank %}
+				<div class="card-eyebrow">{{ 'products.product.vendor' | t }}</div>
+			{% endif %}
 
-      <h3 class="card-heading typography-{{ settings.product_title_font }}">
-        <a role="link" aria-disabled="true">{{ 'onboarding.product_title' | t }}</a>
-      </h3>
-    </div>
+			<h3 class="card-heading typography-{{ settings.product_title_font }}">
+				<a role="link" aria-disabled="true">{{ 'onboarding.product_title' | t }}</a>
+			</h3>
+		</div>
 
-    {% unless settings.catalog_enabled %}
-      <div class="card-footer">
-        <div class="card-footer-intro">
-          <div class="badge-stock badge-stock-in">
-            <span class="badge-stock-dot"></span>
-            {{ 'products.product.availability.in_stock' | t }}
-          </div>
+		{% unless settings.catalog_enabled %}
+			<div class="card-footer">
+				<div class="card-footer-intro">
+					<div class="badge-stock badge-stock-in">
+						<span class="badge-stock-dot"></span> {{ 'products.product.availability.in_stock' | t }}
+					</div>
 
-          {%- if show_rating -%}
-            {% render 'rating', product: card_product %}
-          {% endif %}
-        </div>
+					{%- if show_rating -%}
+						{% render 'rating', product: card_product %}
+					{% endif %}
+				</div>
 
-        {% render 'price', product: card_product, discount_badge: false %}
-      </div>
-    {% endunless %}
-  </div>
+				{% render 'price', product: card_product, discount_badge: false %}
+			</div>
+		{% endunless %}
+	</div>
 {% endif %}
