@@ -38,7 +38,7 @@
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_quantity": true,
+            "show_quantity": false,
             "show_add_to_cart": false,
             "show_buy_now": false
           }
