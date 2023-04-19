@@ -1,0 +1,220 @@
+{
+    "sections": {
+      "main": {
+        "type": "main-product",
+        "blocks": {
+          "title": {
+            "type": "title",
+            "settings": {
+              "show_vendor": true,
+              "show_stock": true,
+              "show_sku": true,
+              "show_barcode": false,
+              "barcode_label": "Barcode",
+              "show_rating": false
+            }
+          },
+          "subtitle": {
+            "type": "text",
+            "settings": {
+              "text": "{{ product.metafields.descriptors.subtitle.value }}",
+              "icon": "",
+              "color_scheme": "none"
+            }
+          },
+          "price": {
+            "type": "price",
+            "settings": {
+                "show_price": false
+            }
+          },
+          "variants": {
+            "type": "variants",
+            "settings": {
+              "picker_type": "button",
+              "hide_single_variant": false,
+              "out_of_stock_variants": "hide"
+            }
+          },
+          "buy_buttons": {
+            "type": "buy_buttons",
+            "settings": {
+              "show_quantity": true,
+              "show_add_to_cart": false,
+              "show_buy_now": false
+            }
+          },
+          "availability": {
+            "type": "availability",
+            "settings": {
+            }
+          },
+          "extra": {
+            "type": "extra",
+            "disabled": true,
+            "settings": {
+              "text": "<p>Use this text to encourage <strong>communication<\/strong> or promote <strong>sharing<\/strong> on social networks.<\/p><p><a href=\"#\">You can also add links<\/a><\/p>",
+              "show_facebook": true,
+              "show_twitter": true,
+              "show_linkedin": true
+            }
+          },
+          "description": {
+            "type": "description",
+            "settings": {
+              "title": "Description",
+              "expanded": true
+            }
+          },
+          "b8f0b091-0dd5-4b9f-88e3-9596dceab2ee": {
+            "type": "expandable",
+            "disabled": true,
+            "settings": {
+              "title": "Documents",
+              "icon": "document",
+              "text": "<ul><li><a href=\"https:\/\/www.ouellet.com\/ouellet.com\/files\/d9\/d91a330e-313d-4e63-abc5-ecb5964ab414.pdf\" target=\"_blank\" title=\"https:\/\/www.ouellet.com\/ouellet.com\/files\/d9\/d91a330e-313d-4e63-abc5-ecb5964ab414.pdf\">Product Sheet<\/a><\/li><li><a href=\"https:\/\/www.ouellet.com\/ouellet.com\/files\/d9\/d91a330e-313d-4e63-abc5-ecb5964ab414.pdf\" target=\"_blank\" title=\"https:\/\/www.ouellet.com\/ouellet.com\/files\/d9\/d91a330e-313d-4e63-abc5-ecb5964ab414.pdf\">Technical Specifications<\/a><\/li><\/ul>",
+              "expanded": false
+            }
+          },
+          "d5cfa5c9-d0fa-4f34-8ac5-36da6a9c20cf": {
+            "type": "custom_liquid",
+            "settings": {
+              "title": "Documents",
+              "icon": "document",
+              "custom_liquid": "{% assign product_sheet_object = product.metafields.custom.product_sheet.value %}\n{% assign technical_specs_object = product.metafields.custom.technical_specs.value %}\n{% assign installation_instructions_object = product.metafields.custom.installation_instructions.value %}\n{% unless product_sheet_object == blank and technical_specs_object == blank and technical_specs_object == blank %}\n<div class = \"product-documents\">\n    {% assign product_sheet_url = product_sheet_object.url %}\n    {% assign product_sheet_with_shopify_extension = product_sheet_url | split: '\/' | last %}\n    {% assign product_sheet_name = product_sheet_with_shopify_extension | split: '?' | first %}\n\n    {% assign technical_specs_url = technical_specs_object.url %}\n    {% assign technical_specs_with_shopify_extension = technical_specs_url | split: '\/' | last %}\n    {% assign technical_specs_name = technical_specs_with_shopify_extension | split: '?' | first %}\n\n    {% assign installation_instructions_url = installation_instructions_object.url %}\n    {% assign installation_instructions_with_shopify_extension = installation_instructions_url | split: '\/' | last %}\n    {% assign installation_instructions_name = installation_instructions_with_shopify_extension | split: '?' | first %}\n    <ul>\n        {% if product_sheet_object != blank %} \n        <li> \n            <a href = \"{{product_sheet_url}}\" target=\"_blank\">\n                <div class = \"product-sheet-name\">\n                    {% if request.locale.iso_code == 'en' %}\n                        <u>Product_Sheet<\/u>\n                    {% else %}\n                        <u>Fiche_Produit<\/u>\n                    {% endif %}\n                <\/div>\n            <\/a> \n        <\/li>\n        {% endif %}\n        {% if technical_specs_object != blank %}\n        <li>\n            <a href = \"{{technical_specs_url}}\" target=\"_blank\">\n                <div class = \"technical-specs-name\">\n                    {% if request.locale.iso_code == 'en' %}\n                        <u>Technical_Specs<\/u>\n                    {% else %}\n                        <u>Spécifications_Techniques<\/u>\n                    {% endif %}\n                <\/div>\n            <\/a> \n        <\/li>\n        {% endif %}\n        {% if installation_instructions_object != blank %}\n        <li>\n            <a href = \"{{installation_instructions_url}}\" target=\"_blank\">\n                <div class = \"installation-instructions-name\">\n                    {% if request.locale.iso_code == 'en' %}\n                        <u>Installation Instructions<\/u>\n                    {% else %}\n                        <u>Instructions d'Installation<\/u>\n                    {% endif %}\n                <\/div>\n            <\/a> \n        <\/li>\n        {% endif %}\n    <\/ul>\n<\/div>\n{% endunless %}",
+              "position": "left",
+              "expanded": false
+            }
+          }
+        },
+        "block_order": [
+          "title",
+          "subtitle",
+          "price",
+          "variants",
+          "buy_buttons",
+          "availability",
+          "extra",
+          "description",
+          "b8f0b091-0dd5-4b9f-88e3-9596dceab2ee",
+          "d5cfa5c9-d0fa-4f34-8ac5-36da6a9c20cf"
+        ],
+        "settings": {
+          "hide_variants": false,
+          "thumbnail_navigation": false
+        }
+      },
+      "recommendations": {
+        "type": "product-recommendations",
+        "settings": {
+          "show": true,
+          "title": "Related products",
+          "count": "4",
+          "show_vendor": true,
+          "show_stock": true,
+          "show_rating": false,
+          "color_scheme": "background-1",
+          "spacing_top": 60,
+          "spacing_bottom": 60
+        }
+      },
+      "dd7c0595-61d6-410b-96ff-b6ef1f93bef0": {
+        "type": "map",
+        "disabled": true,
+        "blocks": {
+          "template--17312061817136__dd7c0595-61d6-410b-96ff-b6ef1f93bef0-167512792653b7e2c0-0": {
+            "type": "location",
+            "settings": {
+              "address": "Athens, Greece",
+              "title": "Location",
+              "address_label": "<p>5241 Van Sig Str<br>Hochkins, Florida<br>51901, United States<\/p><p><strong>(555) 555-5555<\/strong><\/p>",
+              "address_info_window": ""
+            }
+          }
+        },
+        "block_order": [
+          "template--17312061817136__dd7c0595-61d6-410b-96ff-b6ef1f93bef0-167512792653b7e2c0-0"
+        ],
+        "settings": {
+          "heading": "Our Stores",
+          "google_maps_api_key": "",
+          "zoom": 14,
+          "custom_colors_enabled": false,
+          "foreground_color": "#222222",
+          "background_color": "#ffffff",
+          "color_scheme": "background-1",
+          "spacing_top": 60,
+          "spacing_bottom": 60
+        }
+      },
+      "427642b4-2b9c-4547-a7d6-1f1cf4e909dc": {
+        "type": "multicolumn",
+        "disabled": true,
+        "blocks": {
+          "template--17312061817136__427642b4-2b9c-4547-a7d6-1f1cf4e909dc-167512804606b6f2db-0": {
+            "type": "column",
+            "settings": {
+              "image_width": 550,
+              "title": "Column",
+              "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+              "link_label": "",
+              "link": ""
+            }
+          },
+          "template--17312061817136__427642b4-2b9c-4547-a7d6-1f1cf4e909dc-167512804606b6f2db-1": {
+            "type": "column",
+            "settings": {
+              "image_width": 550,
+              "title": "Column",
+              "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+              "link_label": "",
+              "link": ""
+            }
+          },
+          "template--17312061817136__427642b4-2b9c-4547-a7d6-1f1cf4e909dc-167512804606b6f2db-2": {
+            "type": "column",
+            "settings": {
+              "image_width": 550,
+              "title": "Column",
+              "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+              "link_label": "",
+              "link": ""
+            }
+          },
+          "47db7b0e-73c8-4795-8873-03592d6837ff": {
+            "type": "column",
+            "disabled": true,
+            "settings": {
+              "image_width": 550,
+              "title": "Column",
+              "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+              "link_label": "",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "template--17312061817136__427642b4-2b9c-4547-a7d6-1f1cf4e909dc-167512804606b6f2db-0",
+          "template--17312061817136__427642b4-2b9c-4547-a7d6-1f1cf4e909dc-167512804606b6f2db-1",
+          "template--17312061817136__427642b4-2b9c-4547-a7d6-1f1cf4e909dc-167512804606b6f2db-2",
+          "47db7b0e-73c8-4795-8873-03592d6837ff"
+        ],
+        "settings": {
+          "title": "Multicolumn",
+          "columns": 3,
+          "column_alignment": "left",
+          "button_label": "Button label",
+          "button_link": "",
+          "color_scheme": "background-1",
+          "spacing_top": 60,
+          "spacing_bottom": 60
+        }
+      }
+    },
+    "order": [
+      "main",
+      "recommendations",
+      "dd7c0595-61d6-410b-96ff-b6ef1f93bef0",
+      "427642b4-2b9c-4547-a7d6-1f1cf4e909dc"
+    ]
+  }
