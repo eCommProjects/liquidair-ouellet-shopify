@@ -315,23 +315,25 @@
               </div>
 
               {%- when 'price' -%}
-              {% unless settings.catalog_enabled %}
-                <div
-                  class="{%- unless product.has_only_default_variant -%}no-js-hidden{%- endunless -%}"
-                  id="price-{{ section.id }}"
-                  role="status"
-                  {{ block.shopify_attributes }}>
-                  {% render 'price', product: product, discount_badge: true, use_variant: true %}
-                </div>
+              {%- if block.settings.show_price -%}
+                {% unless settings.catalog_enabled %}
+                  <div
+                    class="{%- unless product.has_only_default_variant -%}no-js-hidden{%- endunless -%}"
+                    id="price-{{ section.id }}"
+                    role="status"
+                    {{ block.shopify_attributes }}>
+                    {% render 'price', product: product, discount_badge: true, use_variant: true %}
+                  </div>
 
-                {%- form 'product', product, id: 'product-form-installment', class: 'installment' -%}
-                  <input
-                    type="hidden"
-                    name="id"
-                    value="{{ product.selected_or_first_available_variant.id }}">
-                  {{ form | payment_terms }}
-                {%- endform -%}
-              {% endunless %}
+                  {%- form 'product', product, id: 'product-form-installment', class: 'installment' -%}
+                    <input
+                      type="hidden"
+                      name="id"
+                      value="{{ product.selected_or_first_available_variant.id }}">
+                    {{ form | payment_terms }}
+                  {%- endform -%}
+                {% endunless %}
+              {%- endif -%}
 
               {%- when 'variants' -%}
               <div class="product-variants variants-hidden {% if product.variants.size <= 1 and block.settings.hide_single_variant %}hidden{% endif %}" {{ block.shopify_attributes }}>
@@ -740,8 +742,8 @@
 <script type="application/ld+json">
   {
   "@context": "http://schema.org/",
-              	"@type": "Product",
-              	"name": {{ product.title | json }},
+                  	"@type": "Product",
+                  	"name": {{ product.title | json }},
   "url": {{ request.origin | append: product.url | json }},
   {% if seo_media -%}
     {%- assign media_size = seo_media.preview_image.width -%}
@@ -755,7 +757,7 @@
   {%- endif %}
   "brand": {
   "@type": "Thing",
-              		"name": {{ product.vendor | json }}
+                  		"name": {{ product.vendor | json }}
   },
   "offers": [
   {%- for variant in product.variants -%}
