@@ -321,9 +321,7 @@
                   id="price-{{ section.id }}"
                   role="status"
                   {{ block.shopify_attributes }}>
-                  {% if block.settings.show_price %}
-                    {% render 'price', product: product, discount_badge: true, use_variant: true %}
-                  {%- endif -%}
+                  {% render 'price', product: product, discount_badge: true, use_variant: true %}
                 </div>
 
                 {%- form 'product', product, id: 'product-form-installment', class: 'installment' -%}
@@ -742,8 +740,8 @@
 <script type="application/ld+json">
   {
   "@context": "http://schema.org/",
-          	"@type": "Product",
-          	"name": {{ product.title | json }},
+            	"@type": "Product",
+            	"name": {{ product.title | json }},
   "url": {{ request.origin | append: product.url | json }},
   {% if seo_media -%}
     {%- assign media_size = seo_media.preview_image.width -%}
@@ -757,7 +755,7 @@
   {%- endif %}
   "brand": {
   "@type": "Thing",
-          		"name": {{ product.vendor | json }}
+            		"name": {{ product.vendor | json }}
   },
   "offers": [
   {%- for variant in product.variants -%}
