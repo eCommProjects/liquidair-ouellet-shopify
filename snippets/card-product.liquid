@@ -148,27 +148,25 @@ Usage:
     </div>
 
     {% unless settings.catalog_enabled %}
-      {% unless card_product.template_suffix == "catalogue_mode" %}
+      <div
+        class="card-footer">
         <div
-          class="card-footer">
-          <div
-            class="card-footer-intro">
-            {%- if show_stock -%}
-              {% render 'product-availability-listing', product: card_product %}
-            {% endif %}
+          class="card-footer-intro">
+          {%- if show_stock -%}
+            {% render 'product-availability-listing', product: card_product %}
+          {% endif %}
 
-            {%- if show_rating -%}
-              {% render 'rating', product: card_product %}
-            {% endif %}
-          </div>
-
-          {% render 'price', product: card_product, discount_badge: false %}
-
-          {%- if show_add_to_cart -%}
-            {% render 'card-product-add-to-cart', product: card_product %}
-          {%- endif -%}
+          {%- if show_rating -%}
+            {% render 'rating', product: card_product %}
+          {% endif %}
         </div>
-      {% endunless %}
+        {% unless card_product.template_suffix == "catalogue_mode" %}
+          {% render 'price', product: card_product, discount_badge: false %}
+        {% endunless %}
+        {%- if show_add_to_cart -%}
+          {% render 'card-product-add-to-cart', product: card_product %}
+        {%- endif -%}
+      </div>
     {% endunless %}
   </div>
 {% else %}
