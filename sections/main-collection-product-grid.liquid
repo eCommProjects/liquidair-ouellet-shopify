@@ -3,13 +3,17 @@
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 
-<div class="container">
-  <div class="block-section">
+<div
+  class="container">
+  <div
+    class="block-section">
 
     {% if collection.all_products_count > 0 %}
 
       {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
-        <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
+        <script
+          src="{{ 'facets.js' | asset_url }}"
+          defer="defer"></script>
       {%- endif -%}
 
       {% if section.settings.enable_filtering == false %}
@@ -19,7 +23,9 @@
       {% endif %}
 
       <facet-filters-form>
-        <form id="FacetsFilterForm" class="facets-form"></form>
+        <form
+          id="FacetsFilterForm"
+          class="facets-form"></form>
         <div
           {% if renders_filters == true %}
           class="facets-wrap page-layout-with-sidebar page-layout-with-sidebar-drawer"
@@ -33,7 +39,8 @@
              side_menu: section.settings.side_menu %}
           {% endif %}
 
-          <div class="page-layout-main-content">
+          <div
+            class="page-layout-main-content">
 
             {% render 'collection-actions'
              , results: collection,
@@ -41,20 +48,24 @@
              enable_sorting: section.settings.enable_sorting,
              enable_filters: renders_filters %}
 
-            <div id="ProductGridContainer">
+            <div
+              id="ProductGridContainer">
               {%- paginate collection.products by section.settings.products_per_page -%}
                 {%- if collection.products.size == 0 -%}
                   <div
                     id="product-grid"
                     class="collection collection-empty"
                     data-id="{{ section.id }}">
-                    <div class="loading-overlay"></div>
+                    <div
+                      class="loading-overlay"></div>
                     <h2>{{ 'templates.collection.no_products_title' | t }}</h2>
                     <p>{{ 'templates.collection.use_fewer_filters_html' | t: link: collection.url, class: 'button-text-link' }}</p>
                   </div>
                 {% else %}
-                  <div class="collection">
-                    <div class="loading-overlay"></div>
+                  <div
+                    class="collection">
+                    <div
+                      class="loading-overlay"></div>
                     <ul
                       id="product-grid"
                       class='product-grid
@@ -67,7 +78,8 @@
                         grid-compact grid-5-col-desktop{% endif %}"
                       data-id="{{ section.id }}">
                       {% for product in collection.products %}
-                        <li class="grid-item">
+                        <li
+                          class="grid-item">
                           {% render 'card-product'
                            , card_product: product,
                            show_vendor: section.settings.show_vendor,
@@ -99,12 +111,16 @@
 
     {% else %}
 
-      <div class="page-hero page-hero-empty">
-        <div class="page-hero-caption">
+      <div
+        class="page-hero page-hero-empty">
+        <div
+          class="page-hero-caption">
           {{ 'templates.collection.empty' | t }}
         </div>
 
-        <a href="{{ routes.all_products_collection_url }}" class="button">
+        <a
+          href="{{ routes.all_products_collection_url }}"
+          class="button">
           {{ 'general.continue_shopping' | t }} {% render 'angle', direction: 'right' %}
         </a>
       </div>
