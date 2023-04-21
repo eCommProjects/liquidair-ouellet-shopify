@@ -25,7 +25,6 @@
         "price": {
           "type": "price",
           "settings": {
-            "show_price": true
           }
         },
         "variants": {
