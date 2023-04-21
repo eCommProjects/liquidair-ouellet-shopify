@@ -199,24 +199,26 @@ Usage:
     </div>
 
     {% unless settings.catalog_enabled %}
-      <div
-        class="card-footer">
+      {% unless card_product.template_suffix == "catalogue_mode" %}
         <div
-          class="card-footer-intro">
+          class="card-footer">
           <div
-            class="badge-stock badge-stock-in">
-            <span
-              class="badge-stock-dot"></span>
-            {{ 'products.product.availability.in_stock' | t }}
+            class="card-footer-intro">
+            <div
+              class="badge-stock badge-stock-in">
+              <span
+                class="badge-stock-dot"></span>
+              {{ 'products.product.availability.in_stock' | t }}
+            </div>
+
+            {%- if show_rating -%}
+              {% render 'rating', product: card_product %}
+            {% endif %}
           </div>
 
-          {%- if show_rating -%}
-            {% render 'rating', product: card_product %}
-          {% endif %}
+          {% render 'price', product: card_product, discount_badge: false %}
         </div>
-
-        {% render 'price', product: card_product, discount_badge: false %}
-      </div>
+      {% endunless %}
     {% endunless %}
   </div>
 {% endif %}
