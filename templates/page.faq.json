@@ -19,6 +19,7 @@
         },
         "cc476107-5c39-480e-9c70-6a13ac5ea5a5": {
           "type": "faq",
+          "disabled": true,
           "settings": {
             "question": "3. Do you offer free shipping?",
             "answer": "<ul><li>Yes, we offer free shipping on all orders over $100 within Canada, and certain specific discounted items. <\/li><li>We do not currently ship internationally. If you have any questions about shipping, please contact our customer service team.<\/li><\/ul>"
