@@ -259,8 +259,71 @@
             "mobile_box_align": "bottom-left"
           }
         },
+        "collection-5": {
+          "type": "collection",
+          "settings": {
+            "collection": "baseboard-heaters",
+            "image": "shopify:\/\/shop_images\/Screenshot_2022-12-23_at_2.51.32_PM.png",
+            "overlay_background": "linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8) 100%)",
+            "button_text": "",
+            "button_type_link": false,
+            "button_color_scheme": "button-primary",
+            "heading_size": "md",
+            "text_color": "#ffffff",
+            "box_align": "bottom-left",
+            "mobile_heading_size": "md",
+            "mobile_box_align": "bottom-left"
+          }
+        },
+        "8996e990-d8b9-4c12-92c5-63f829f8e76a": {
+          "type": "collection",
+          "settings": {
+            "collection": "thermostats",
+            "overlay_background": "linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8) 100%)",
+            "button_text": "",
+            "button_type_link": false,
+            "button_color_scheme": "button-primary",
+            "heading_size": "md",
+            "text_color": "#ffffff",
+            "box_align": "bottom-left",
+            "mobile_heading_size": "md",
+            "mobile_box_align": "bottom-left"
+          }
+        },
+        "collection-4": {
+          "type": "collection",
+          "settings": {
+            "collection": "floor-heating-cables",
+            "overlay_background": "linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8) 100%)",
+            "button_text": "",
+            "button_type_link": false,
+            "button_color_scheme": "button-primary",
+            "heading_size": "md",
+            "text_color": "#ffffff",
+            "box_align": "bottom-left",
+            "mobile_heading_size": "md",
+            "mobile_box_align": "bottom-left"
+          }
+        },
+        "collection-2": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "unit-heaters",
+            "overlay_background": "linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8) 100%)",
+            "button_text": "",
+            "button_type_link": false,
+            "button_color_scheme": "button-primary",
+            "heading_size": "md",
+            "text_color": "#ffffff",
+            "box_align": "bottom-left",
+            "mobile_heading_size": "md",
+            "mobile_box_align": "bottom-left"
+          }
+        },
         "011152c8-4e64-4eaf-84a6-3f17cab1fe2f": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "portable-air-conditioners",
             "overlay_background": "linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8) 100%)",
@@ -276,6 +339,7 @@
         },
         "f01e5857-99ed-42b2-8f79-babcb1d6fa30": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "window-air-conditioners",
             "overlay_background": "linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8) 100%)",
@@ -291,6 +355,7 @@
         },
         "collection-1": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "dehumidifiers",
             "overlay_background": "linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8) 100%)",
@@ -320,84 +385,19 @@
             "mobile_heading_size": "md",
             "mobile_box_align": "bottom-left"
           }
-        },
-        "collection-2": {
-          "type": "collection",
-          "disabled": true,
-          "settings": {
-            "collection": "unit-heaters",
-            "overlay_background": "linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8) 100%)",
-            "button_text": "",
-            "button_type_link": false,
-            "button_color_scheme": "button-primary",
-            "heading_size": "md",
-            "text_color": "#ffffff",
-            "box_align": "bottom-left",
-            "mobile_heading_size": "md",
-            "mobile_box_align": "bottom-left"
-          }
-        },
-        "collection-4": {
-          "type": "collection",
-          "disabled": true,
-          "settings": {
-            "collection": "floor-heating-cables",
-            "overlay_background": "linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8) 100%)",
-            "button_text": "",
-            "button_type_link": false,
-            "button_color_scheme": "button-primary",
-            "heading_size": "md",
-            "text_color": "#ffffff",
-            "box_align": "bottom-left",
-            "mobile_heading_size": "md",
-            "mobile_box_align": "bottom-left"
-          }
-        },
-        "collection-5": {
-          "type": "collection",
-          "disabled": true,
-          "settings": {
-            "collection": "baseboard-heaters",
-            "image": "shopify:\/\/shop_images\/Screenshot_2022-12-23_at_2.51.32_PM.png",
-            "overlay_background": "linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8) 100%)",
-            "button_text": "",
-            "button_type_link": false,
-            "button_color_scheme": "button-primary",
-            "heading_size": "md",
-            "text_color": "#ffffff",
-            "box_align": "bottom-left",
-            "mobile_heading_size": "md",
-            "mobile_box_align": "bottom-left"
-          }
-        },
-        "8996e990-d8b9-4c12-92c5-63f829f8e76a": {
-          "type": "collection",
-          "disabled": true,
-          "settings": {
-            "collection": "thermostats",
-            "overlay_background": "linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8) 100%)",
-            "button_text": "",
-            "button_type_link": false,
-            "button_color_scheme": "button-primary",
-            "heading_size": "md",
-            "text_color": "#ffffff",
-            "box_align": "bottom-left",
-            "mobile_heading_size": "md",
-            "mobile_box_align": "bottom-left"
-          }
         }
       },
       "block_order": [
         "074aa07d-2c99-4a3f-8eb3-98a40195c6c9",
         "collection-3",
+        "collection-5",
+        "8996e990-d8b9-4c12-92c5-63f829f8e76a",
+        "collection-4",
+        "collection-2",
         "011152c8-4e64-4eaf-84a6-3f17cab1fe2f",
         "f01e5857-99ed-42b2-8f79-babcb1d6fa30",
         "collection-1",
-        "collection-0",
-        "collection-2",
-        "collection-4",
-        "collection-5",
-        "8996e990-d8b9-4c12-92c5-63f829f8e76a"
+        "collection-0"
       ],
       "settings": {
         "heading": "Popular categories",
