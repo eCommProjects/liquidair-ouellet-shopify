@@ -118,13 +118,12 @@
       "type": "featured-collection",
       "settings": {
         "collection": "heating",
-        "products_to_show": 6,
+        "products_to_show": 5,
         "products": [
           "dimplex-infrared-patio-heater-240v",
           "copy-of-dimplex-indoor-outdoor-electric-infrared-heater-240v",
-          "portable-air-conditionner-tosot-gpc-series",
-          "residential-fan-heater-120v",
-          "rfi-commercial-fan-forced-heater-white"
+          "aube-radiant-floor-heating-programmable-thermostat-120v-240v",
+          "gc-cag-series-floor-heating-free-cable-240-208-v3360"
         ],
         "heading": "Deals of the week",
         "show_vendor": true,
@@ -416,7 +415,6 @@
     },
     "tabs": {
       "type": "collection-tabs",
-      "disabled": true,
       "blocks": {
         "collection-0": {
           "type": "collection",
@@ -476,6 +474,7 @@
         "collection-1",
         "33a3d281-6c10-4365-b110-cac81a83bf72"
       ],
+      "disabled": true,
       "settings": {
         "heading": "Popular brands",
         "products_to_show": 4,
