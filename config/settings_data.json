@@ -183,22 +183,12 @@
               "title": "Policies & Terms of Service",
               "menu": "footer-policies"
             }
-          },
-          "footer-3": {
-            "type": "text",
-            "disabled": true,
-            "settings": {
-              "title": "Optional title",
-              "image_width": 340,
-              "text": "<p>Share information such as the store's physical address, contact details, opening hours, etc.<\/p>"
-            }
           }
         },
         "block_order": [
           "footer-1",
           "footer-2",
-          "9d481f55-15e6-43cc-b284-8830af89f0ca",
-          "footer-3"
+          "9d481f55-15e6-43cc-b284-8830af89f0ca"
         ],
         "settings": {
           "payment_enable": true,
