@@ -137,6 +137,8 @@
           return;
         
 
+
+
         js = d.createElement(s);
         js.id = id;
         js.src = 'https://connect.facebook.net/fr_FR/sdk/xfbml.customerchat.js';
@@ -166,7 +168,6 @@
       role="main"
       tabindex="-1">
       {% section 'header-features' %}
-      {% render 'cookie-banner' %}
 
       {% if settings.breadcrumbs_enabled %}
         {% render 'breadcrumb' %}
@@ -193,5 +194,6 @@
     <!--begin-boost-pfs-js-->
 
     <!--end-boost-pfs-js-->
+    {% render 'cookie-banner' %}
   </body>
 </html>
