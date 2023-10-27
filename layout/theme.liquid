@@ -1,7 +1,13 @@
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}">
   <head>
-    <!-- Google Tag Manager -->
+
+      <!-- Google Tag Manager integration- script from Consentmo GDPR Compliance App -->
+  <script id="gdpr-gtm-blocking-script">
+    let isGTMExecuted = false;
+    function executeGTM() {
+      if(!isGTMExecuted) {
+        <!-- Google Tag Manager -->
     <script>
       (function(w, d, s, l, i) {
         w[l] = w[l] || [];
@@ -17,13 +23,6 @@
       })(window, document, 'script', 'dataLayer', 'GTM-MPNF2L8');
     </script>
     <!-- End Google Tag Manager -->
-
-      <!-- Google Tag Manager integration- script from Consentmo GDPR Compliance App -->
-  <script id="gdpr-gtm-blocking-script">
-    let isGTMExecuted = false;
-    function executeGTM() {
-      if(!isGTMExecuted) {
-        // The content of Google Tag Manager script goes here
   
         isGTMExecuted = true;
       }
