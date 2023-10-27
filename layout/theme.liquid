@@ -18,6 +18,51 @@
     </script>
     <!-- End Google Tag Manager -->
 
+      <!-- Google Tag Manager integration- script from Consentmo GDPR Compliance App -->
+  <script id="gdpr-gtm-blocking-script">
+    let isGTMExecuted = false;
+    function executeGTM() {
+      if(!isGTMExecuted) {
+        // The content of Google Tag Manager script goes here
+  
+        isGTMExecuted = true;
+      }
+    }
+    function checkConsentForGTM(adittionalChecks = 0) {  
+      let cpdCookie=(document.cookie.match(/^(?:.*;)?\s*cookieconsent_preferences_disabled(\s*=\s*([^;]+)?)(?:.*)?$/)||[,null])[1];
+      if(cpdCookie != null) {
+        if(parseInt(cpdCookie.indexOf('marketing')) === -1 && parseInt(cpdCookie.indexOf('analytics')) === -1) {
+          executeGTM();
+        }
+      } else {
+        let gdprCache = localStorage.getItem('gdprCache') ? JSON.parse(localStorage.getItem('gdprCache')) : null;
+        let gdprCacheConsentSettings = gdprCache && gdprCache.getCookieConsentSettings ? JSON.parse(gdprCache.getCookieConsentSettings) : null;
+        let gdprCacheCountryDetection = gdprCache && gdprCache.countryDetection ? JSON.parse(gdprCache.countryDetection) : null;
+        let ccsCookie = (document.cookie.match(/^(?:.*;)?\s*cookieconsent_status\s*=\s*([^;]+)(?:.*)?$/)||[,null])[1];
+        if((gdprCacheConsentSettings || (gdprCacheCountryDetection && gdprCacheCountryDetection.disable === '1')) && !ccsCookie) {
+          if((gdprCacheConsentSettings && gdprCacheConsentSettings.status === 'disabled') || gdprCacheCountryDetection.disable === '1'){
+            executeGTM();
+          } else {
+            let initPreferences = parseInt(gdprCacheConsentSettings.checkboxes_behavior);
+            if(initPreferences === 1 || initPreferences === 4) {
+              executeGTM();
+            }
+          }
+        } else {
+          if (adittionalChecks > 0) {
+            setTimeout(function() {
+              checkConsentForGTM(adittionalChecks - 1);
+            }, 1000);
+          } else {
+            executeGTM();
+          }
+        }
+      }
+    }
+  
+    checkConsentForGTM(3);
+  </script>
+
     <meta charset="utf-8">
 
     <title>
