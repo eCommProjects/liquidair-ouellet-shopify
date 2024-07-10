@@ -1,11 +1,24 @@
 /* assets/custom-calculator.css */
 body {
     font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
 }
 
 .calculator-container {
     max-width: 800px;
-    margin: 50px auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
