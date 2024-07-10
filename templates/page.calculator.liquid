@@ -1,0 +1,69 @@
+<!-- templates/page.calculator.liquid -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculateur de Pied Carré</title>
+    <link rel="stylesheet" href="{{ 'custom-calculator.css' | asset_url }}">
+</head>
+<body>
+    <div class="calculator-container">
+        <h2>Calculateur de Pied Carré</h2>
+        
+        <label for="location">Où?</label>
+        <select id="location">
+            <option value="sous-sol">Sous-sol</option>
+            <option value="salle de bain">Salle de bain</option>
+            <option value="chambre">Chambre</option>
+            <option value="salon">Salon</option>
+            <option value="salle à manger">Salle à manger</option>
+            <option value="cuisine">Cuisine</option>
+            <option value="entrée">Entrée</option>
+            <option value="salle familiale">Salle familiale</option>
+            <option value="garage">Garage</option>
+            <option value="bureau">Bureau</option>
+            <option value="autres">Autres</option>
+        </select>
+
+        <label for="floor">Type de plancher?</label>
+        <select id="floor">
+            <option value="beton">Béton</option>
+            <option value="ceramique">Céramique</option>
+            <option value="plancher de bois franc">Plancher de bois franc</option>
+            <option value="tapis">Tapis</option>
+            <option value="marbre">Marbre</option>
+            <option value="plancher flottant">Plancher flottant</option>
+            <option value="autres">Autres</option>
+        </select>
+
+        <label for="subfloor">Sous-plancher?</label>
+        <select id="subfloor">
+            <option value="beton">Béton</option>
+            <option value="bois">Bois</option>
+            <option value="autres">Autres</option>
+        </select>
+
+        <label for="area">Zone chauffée? (en pied carré)</label>
+        <input type="number" id="area" placeholder="Entrez la surface en pied carré">
+
+        <button onclick="calculate()">Calculer</button>
+
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        function calculate() {
+            const area = parseFloat(document.getElementById('area').value);
+            if (isNaN(area)) {
+                document.getElementById('result').innerText = "Veuillez entrer une valeur valide.";
+                return;
+            }
+
+            const totalArea = area + area + area; // Calcul selon l'exemple fourni
+
+            document.getElementById('result').innerText = `Surface totale à couvrir: ${totalArea} pied carré`;
+        }
+    </script>
+</body>
+</html>
