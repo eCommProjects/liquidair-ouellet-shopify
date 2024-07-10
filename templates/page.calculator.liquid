@@ -1,79 +1,79 @@
-<!-- templates/page.calculator.liquid -->
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculateur de Pied Carré</title>
-    <link rel="stylesheet" href="{{ 'custom-calculator.css' | asset_url }}">
-</head>
-<body>
-    <div class="container">
-        <div class="calculator-container">
-            <h2>Calculateur de Pied Carré</h2>
-            
-            <div class="form-group">
-                <label for="location">Où?</label>
-                <select id="location">
-                    <option value="sous-sol">Sous-sol</option>
-                    <option value="salle de bain">Salle de bain</option>
-                    <option value="chambre">Chambre</option>
-                    <option value="salon">Salon</option>
-                    <option value="salle à manger">Salle à manger</option>
-                    <option value="cuisine">Cuisine</option>
-                    <option value="entrée">Entrée</option>
-                    <option value="salle familiale">Salle familiale</option>
-                    <option value="garage">Garage</option>
-                    <option value="bureau">Bureau</option>
-                    <option value="autres">Autres</option>
-                </select>
-            </div>
+/* assets/custom-calculator.css */
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
 
-            <div class="form-group">
-                <label for="floor">Type de plancher?</label>
-                <select id="floor">
-                    <option value="beton">Béton</option>
-                    <option value="ceramique">Céramique</option>
-                    <option value="plancher de bois franc">Plancher de bois franc</option>
-                    <option value="tapis">Tapis</option>
-                    <option value="marbre">Marbre</option>
-                    <option value="plancher flottant">Plancher flottant</option>
-                    <option value="autres">Autres</option>
-                </select>
-            </div>
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
 
-            <div class="form-group">
-                <label for="subfloor">Sous-plancher?</label>
-                <select id="subfloor">
-                    <option value="beton">Béton</option>
-                    <option value="bois">Bois</option>
-                    <option value="autres">Autres</option>
-                </select>
-            </div>
+.calculator-container {
+    max-width: 500px;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 2px solid #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
 
-            <div class="form-group">
-                <label for="area">Zone chauffée? (en pied carré)</label>
-                <input type="number" id="area" placeholder="Entrez la surface en pied carré">
-            </div>
+.calculator-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
 
-            <button onclick="calculate()">Calculer</button>
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
 
-            <div class="result" id="result"></div>
-        </div>
-    </div>
+.calculator-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
 
-    <script>
-        function calculate() {
-            const area = parseFloat(document.getElementById('area').value);
-            if (isNaN(area)) {
-                document.getElementById('result').innerText = "Veuillez entrer une valeur valide.";
-                return;
-            }
+.calculator-container select,
+.calculator-container input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
 
-            const totalArea = area + area + area; // Calcul selon l'exemple fourni
+.calculator-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
-            document.getElementById('result').innerText = `Surface totale à couvrir: ${totalArea} pied carré`;
-        }
-    </script>
-</body>
-</html>
+.calculator-container button:hover {
+    background-color: #0056b3;
+}
+
+.result {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
