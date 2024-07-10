@@ -52,35 +52,26 @@
             </div>
 
             <div class="form-group">
-                <label for="length">Longueur (en pieds)</label>
-                <input type="number" id="length" placeholder="Entrez la longueur en pieds">
+                <label for="area">Surface de la pièce (en pieds carrés)</label>
+                <input type="number" id="area" placeholder="Entrez la surface en pieds carrés">
             </div>
 
-            <div class="form-group">
-                <label for="width">Largeur (en pieds)</label>
-                <input type="number" id="width" placeholder="Entrez la largeur en pieds">
-            </div>
-
-            <button onclick="calculate()">Calculer</button>
+            <button onclick="displayArea()">Afficher la Surface</button>
 
             <div class="result" id="result"></div>
         </div>
     </div>
 
     <script>
-        function calculate() {
-            const length = parseFloat(document.getElementById('length').value);
-            const width = parseFloat(document.getElementById('width').value);
-            
-            if (isNaN(length) || isNaN(width)) {
-                document.getElementById('result').innerText = "Veuillez entrer des valeurs valides.";
+        function displayArea() {
+            const area = parseFloat(document.getElementById('area').value);
+            if (isNaN(area)) {
+                document.getElementById('result').innerText = "Veuillez entrer une valeur valide.";
                 return;
             }
 
-            const area = length * width;
             document.getElementById('result').innerText = `La surface de la pièce est de ${area.toFixed(2)} pieds carrés.`;
         }
     </script>
 </body>
 </html>
-
