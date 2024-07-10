@@ -52,8 +52,13 @@
             </div>
 
             <div class="form-group">
-                <label for="area">Zone chauffée? (en pied carré)</label>
-                <input type="number" id="area" placeholder="Entrez la surface en pied carré">
+                <label for="length">Longueur (en pieds)</label>
+                <input type="number" id="length" placeholder="Entrez la longueur en pieds">
+            </div>
+
+            <div class="form-group">
+                <label for="width">Largeur (en pieds)</label>
+                <input type="number" id="width" placeholder="Entrez la largeur en pieds">
             </div>
 
             <button onclick="calculate()">Calculer</button>
@@ -64,15 +69,16 @@
 
     <script>
         function calculate() {
-            const area = parseFloat(document.getElementById('area').value);
-            if (isNaN(area)) {
-                document.getElementById('result').innerText = "Veuillez entrer une valeur valide.";
+            const length = parseFloat(document.getElementById('length').value);
+            const width = parseFloat(document.getElementById('width').value);
+            
+            if (isNaN(length) || isNaN(width)) {
+                document.getElementById('result').innerText = "Veuillez entrer des valeurs valides.";
                 return;
             }
 
-            const totalArea = area + area + area; // Calcul selon l'exemple fourni
-
-            document.getElementById('result').innerText = `Surface totale à couvrir: ${totalArea} pied carré`;
+            const area = length * width;
+            document.getElementById('result').innerText = `La surface de la pièce est de ${area.toFixed(2)} pieds carrés.`;
         }
     </script>
 </body>
