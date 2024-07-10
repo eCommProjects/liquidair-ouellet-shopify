@@ -13,7 +13,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
     width: 100%;
 }
 
@@ -24,6 +23,7 @@ body {
     background-color: #fff;
     border-radius: 8px;
     border: 2px solid #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: left;
 }
 
@@ -42,22 +42,19 @@ body {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
-    text-align: left;
 }
 
 .calculator-container select,
 .calculator-container input {
-    width: calc(100% - 20px);
+    width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
-    display: inline-block;
-    margin-left: 10px;
 }
 
 .calculator-container button {
-    width: calc(100% - 20px);
+    width: 100%;
     padding: 10px;
     background-color: #007bff;
     border: none;
@@ -66,8 +63,6 @@ body {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    display: inline-block;
-    margin-left: 10px;
 }
 
 .calculator-container button:hover {
