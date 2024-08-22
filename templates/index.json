@@ -27,6 +27,7 @@
             "link": "shopify:\/\/collections\/luminaires",
             "box_align": "middle-left",
             "content_width": 50,
+            "mobile_image": "shopify:\/\/shop_images\/Socials_Templates_9.png",
             "mobile_heading_size": "lg",
             "mobile_box_align": "middle-center"
           }
