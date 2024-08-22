@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "5dc7dfdb-e3ae-4c25-9cf6-16a503ddcbd6": {
@@ -14,7 +23,7 @@
             "text_color": "#ffffff",
             "button_label": "Shop All",
             "button_type_link": false,
-            "button_color_scheme": "accent-1",
+            "button_color_scheme": "button-primary",
             "link": "shopify:\/\/collections\/all",
             "box_align": "middle-left",
             "content_width": 50,
@@ -23,29 +32,29 @@
             "mobile_box_align": "middle-center"
           }
         },
-        "template--17312061718832__5dc7dfdb-e3ae-4c25-9cf6-16a503ddcbd6-1678927505fc686a5c-1": {
+        "slide_MGNcqR": {
           "type": "slide",
-          "disabled": true,
           "settings": {
-            "overlay_background": "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%)",
-            "heading": "Image slide",
-            "heading_size": "md",
-            "subheading": "<p>Tell your brand's story through images<\/p>",
-            "text_color": "#ffffff",
-            "button_label": "Button label",
+            "image": "shopify:\/\/shop_images\/FR_12.png",
+            "overlay_background": "linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8) 100%)",
+            "heading": "NEW ARRIVALS",
+            "heading_size": "xl",
+            "subheading": "<p>Lighting<\/p><p><strong>Unbeatable Prices<\/strong><\/p>",
+            "text_color": "#fff",
+            "button_label": "Discover",
             "button_type_link": false,
             "button_color_scheme": "button-primary",
-            "link": "",
-            "box_align": "bottom-left",
-            "content_width": 60,
-            "mobile_heading_size": "md",
-            "mobile_box_align": "bottom-left"
+            "link": "shopify:\/\/collections\/luminaires",
+            "box_align": "middle-left",
+            "content_width": 50,
+            "mobile_heading_size": "lg",
+            "mobile_box_align": "middle-center"
           }
         }
       },
       "block_order": [
         "template--17312061718832__5dc7dfdb-e3ae-4c25-9cf6-16a503ddcbd6-1678927505fc686a5c-0",
-        "template--17312061718832__5dc7dfdb-e3ae-4c25-9cf6-16a503ddcbd6-1678927505fc686a5c-1"
+        "slide_MGNcqR"
       ],
       "settings": {
         "full_width": true,
@@ -416,7 +425,6 @@
     },
     "tabs": {
       "type": "collection-tabs",
-      "disabled": true,
       "blocks": {
         "collection-0": {
           "type": "collection",
@@ -476,6 +484,7 @@
         "collection-1",
         "33a3d281-6c10-4365-b110-cac81a83bf72"
       ],
+      "disabled": true,
       "settings": {
         "heading": "Popular brands",
         "products_to_show": 4,
