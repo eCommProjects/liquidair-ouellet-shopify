@@ -224,9 +224,6 @@
       {% section 'newsletter' %}
 
       {% section 'footer' %}
-      <iframe
-	style="height: 600px; width: 400px; border-radius: 20px; border: slategrey 1px solid;"
-	src="https://chat.m-lai.ai/widget/liquidair"/>
 
       {% render 'header-mini-cart' %}
     </footer>
@@ -239,5 +236,15 @@
     <!--end-boost-pfs-js-->
     {% render 'cookie-banner' %}
   </body>
+  <script>
+	window.ChatWidgetConfig = {
+	  bubbleUrl: "undefined",
+	  id: 'liquidair',
+	  activate_msg: true,
+	  delay: 3000,
+	  message: Essayez notre Agent IA!
+	};
+</script>
+<script src="https://m-lai.b-cdn.net/chat-widget.js" async></script>
 
 </html>
