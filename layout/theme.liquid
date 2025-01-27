@@ -236,15 +236,23 @@
     <!--end-boost-pfs-js-->
     {% render 'cookie-banner' %}
   </body>
-  <script>
-	window.ChatWidgetConfig = {
-	  bubbleUrl: "https://m-lai.b-cdn.net/liquidair/image.png",
-	  id: 'liquidair',
-	  activate_msg: true,
-	  delay: 3000,
-	  message: Essayez notre Agent IA!
-	};
-</script>
-<script src="https://m-lai.b-cdn.net/chat-widget.js" async></script>
+  <!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+    <script>
+        window.ChatWidgetConfig = {
+            bubbleUrl: "https://m-lai.b-cdn.net/liquidair/image.png",
+            id: 'liquidair',
+            activate_msg: true,
+            delay: 3000,
+            message: "Essayez notre Agent IA!"
+        };
+    </script>
+    <!-- Inclusion du script du widget de chat -->
+    <script src="https://m-lai.b-cdn.net/chat-widget.js" async></script>
+    </body>
+</html>
   
 </html>
