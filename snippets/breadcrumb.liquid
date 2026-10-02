@@ -18,7 +18,7 @@
 				{%- when 'page' -%}
 					<span>{{ separator }}</span>
 					{{ page.title }}
-				{%- when 'collection' and collection.handle -%}
+				{%- when 'collection' -%}
 					{%- if current_tags -%}
 						<span>{{ separator }}</span>
 						{{ collection.title | link_to: collection.url }}
@@ -59,3 +59,13 @@
 	</div>
 {%- endunless -%}
 
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{%- when 'collection' and collection.handle -%}"
+  to: "{%- when 'collection' -%}"
+  position: 668..693
+{% endcomment %}
